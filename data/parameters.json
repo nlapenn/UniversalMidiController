@@ -1,0 +1,7745 @@
+{
+  "parameters": [
+	{
+	  "id": "nrpn_000_polyphony",
+	  "type": "list",
+	  "name": "polyphony",
+	  "display_name": "Polyphony",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 0
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"monophonic",
+        "polyphonic"
+	  ]
+	},
+	{
+	  "id": "nrpn_001_unison_voices",
+	  "type": "list",
+	  "name": "unison voices",
+	  "display_name": "Unison Voices",
+	  "units": "per voice",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 1
+	  },
+	  "range": [
+		0,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "unison voices",
+	  "options": [
+		"1",
+		"2",
+		"4",
+        "8"
+	  ]
+	},
+	{
+	  "id": "nrpn_002_unison_detune",
+	  "type": "int",
+	  "name": "unison detune",
+	  "display_name": "Unison Detune",
+	  "units": "%",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 2
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "unison detune",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_003_portamento_enabled",
+	  "type": "list",
+	  "name": "portamento enabled",
+	  "display_name": "Portamento",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 3
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "portamento",
+	  "options": [
+		"off",
+		"legato",
+        "always"
+	  ]
+	},
+	{
+	  "id": "nrpn_004_portamento_type",
+	  "type": "list",
+	  "name": "portamento type",
+	  "display_name": "Portamento Type",
+	  "units": "",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 4
+	  },
+	  "range": [
+		0,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "portamento type",
+	  "options": [
+		"fixed",
+		"scaled",
+		"gliss fixed",
+        "gliss scaled"
+	  ]
+	},
+	{
+	  "id": "nrpn_005_portamento_time",
+	  "type": "int",
+	  "name": "portamento time",
+	  "display_name": "Portamento Time",
+	  "units": "ms",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 5
+	  },
+	  "range": [
+		0,
+		127
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "portamento time",
+	  "conv": "porta_time"
+	},
+	{
+	  "id": "nrpn_006_pitchwheel_type",
+	  "type": "list",
+	  "name": "pitchwheel type",
+	  "display_name": "Pitchwheel Type",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 6
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "pitch wheel mode",
+	  "options": [
+		"held",
+        "all"
+	  ]
+	},
+	{
+	  "id": "nrpn_007_analog_drift",
+	  "type": "int",
+	  "name": "analog drift",
+	  "display_name": "Analog Drift",
+	  "units": "%",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 7
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "analog drift",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_008_oscillator_sync_type",
+	  "type": "list",
+	  "name": "oscillator sync type",
+	  "display_name": "Osc Sync Type",
+	  "units": "",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 8
+	  },
+	  "range": [
+		0,
+		4
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc sync type",
+	  "options": [
+		"off",
+		"hard 2 -> 1",
+		"hard 2+3 -> 1",
+		"soft 2 -> 1",
+        "soft 2+3 -> 1"
+	  ]
+	},
+	{
+	  "id": "nrpn_009_fm_amount",
+	  "type": "int",
+	  "name": "FM amount",
+	  "display_name": "FM Amount",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 9
+	  },
+	  "range": [
+		0,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fm amount",
+	  "conv": "tenths_of_percent"
+	},
+	{
+	  "id": "nrpn_010_fm_type",
+	  "type": "list",
+	  "name": "FM type",
+	  "display_name": "FM Type",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 10
+	  },
+	  "range": [
+		0,
+		5
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fm type",
+	  "options": [
+		"lin 2 -> 1",
+		"lin 2+3 -> 1",
+		"lin 3 -> 2 -> 1",
+		"exp 2 -> 1",
+		"exp 2+3 -> 1",
+        "exp 3 -> 2 -> 1"
+	  ]
+	},
+	{
+	  "id": "nrpn_011_oscillator_1_waveform",
+	  "type": "list",
+	  "name": "oscillator 1 waveform",
+	  "display_name": "Osc 1 Waveform",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 11
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 waveform",
+	  "options": [
+		"sine",
+		"tri/saw",
+        "pulse"
+	  ]
+	},
+	{
+	  "id": "nrpn_012_oscillator_1_wave_shape",
+	  "type": "int",
+	  "name": "oscillator 1 wave shape",
+	  "display_name": "Osc 1 Shape",
+	  "units": "%",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 12
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 shape",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_013_oscillator_1_octave",
+	  "type": "list",
+	  "name": "oscillator 1 octave",
+	  "display_name": "Osc 1 Octave",
+	  "units": "",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 13
+	  },
+	  "range": [
+		-3,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 octave",
+	  "options": [
+		"-3",
+		"-2",
+		"-1",
+		"0",
+		"1",
+		"2",
+        "3"
+	  ],
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_014_oscillator_1_transpose",
+	  "type": "list",
+	  "name": "oscillator 1 transpose",
+	  "display_name": "Osc 1 Transpose",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 14
+	  },
+	  "range": [
+		-7,
+		7
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 pitch semi",
+	  "options": [
+		"-7",
+		"-6",
+		"-5",
+		"-4",
+		"-3",
+		"-2",
+		"-1",
+		"0",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+        "7"
+	  ],
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_015_oscillator_1_pitch",
+	  "type": "int",
+	  "name": "oscillator 1 pitch",
+	  "display_name": "Osc 1 Pitch",
+	  "units": "%",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 15
+	  },
+	  "range": [
+		-999,
+		999
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 pitch fine",
+	  "conv": "pitch_fine",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_016_oscillator_1_pitchwheel_range",
+	  "type": "int",
+	  "name": "oscillator 1 pitchwheel range",
+	  "display_name": "Osc 1 Wheel Range",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 16
+	  },
+	  "range": [
+		0,
+		12
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 p wheel range",
+	  "conv": "integer"
+	},
+	{
+	  "id": "nrpn_017_oscillator_2_waveform",
+	  "type": "list",
+	  "name": "oscillator 2 waveform",
+	  "display_name": "Osc 2 Waveform",
+	  "units": "",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 17
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 waveform",
+	  "options": [
+		"sine",
+		"tri/saw",
+        "pulse"
+	  ]
+	},
+	{
+	  "id": "nrpn_018_oscillator_2_wave_shape",
+	  "type": "int",
+	  "name": "oscillator 2 wave shape",
+	  "display_name": "Osc 2 Shape",
+	  "units": "%",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 18
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 shape",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_019_oscillator_2_octave",
+	  "type": "list",
+	  "name": "oscillator 2 octave",
+	  "display_name": "Osc 2 Octave",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 19
+	  },
+	  "range": [
+		-3,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 octave",
+	  "options": [
+		"-3",
+		"-2",
+		"-1",
+		"0",
+		"1",
+		"2",
+        "3"
+	  ],
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_020_oscillator_2_transpose",
+	  "type": "list",
+	  "name": "oscillator 2 transpose",
+	  "display_name": "Osc 2 Transpose",
+	  "units": "",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 20
+	  },
+	  "range": [
+		-7,
+		7
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 pitch semi",
+	  "options": [
+		"-7",
+		"-6",
+		"-5",
+		"-4",
+		"-3",
+		"-2",
+		"-1",
+		"0",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+        "7"
+	  ],
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_021_oscillator_2_pitch",
+	  "type": "int",
+	  "name": "oscillator 2 pitch",
+	  "display_name": "Osc 2 Pitch",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 21
+	  },
+	  "range": [
+		-999,
+		999
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 pitch fine",
+	  "conv": "pitch_fine",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_022_oscillator_2_pitchwheel_range",
+	  "type": "int",
+	  "name": "oscillator 2 pitchwheel range",
+	  "display_name": "Osc 2 Wheel Range",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 22
+	  },
+	  "range": [
+		0,
+		12
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 p wheel range",
+	  "conv": "integer"
+	},
+	{
+	  "id": "nrpn_023_oscillator_3_waveform",
+	  "type": "list",
+	  "name": "oscillator 3 waveform",
+	  "display_name": "Osc 3 Waveform",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 23
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 waveform",
+	  "options": [
+		"sine",
+		"tri/saw",
+        "pulse"
+	  ]
+	},
+	{
+	  "id": "nrpn_024_oscillator_3_wave_shape",
+	  "type": "int",
+	  "name": "oscillator 3 wave shape",
+	  "display_name": "Osc 3 Shape",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 24
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 shape",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_025_oscillator_3_octave",
+	  "type": "list",
+	  "name": "oscillator 3 octave",
+	  "display_name": "Osc 3 Octave",
+	  "units": "",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 25
+	  },
+	  "range": [
+		-3,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 octave",
+	  "options": [
+		"-3",
+		"-2",
+		"-1",
+		"0",
+		"1",
+		"2",
+        "3"
+	  ],
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_026_oscillator_3_transpose",
+	  "type": "list",
+	  "name": "oscillator 3 transpose",
+	  "display_name": "Osc 3 Transpose",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 26
+	  },
+	  "range": [
+		-7,
+		7
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 pitch semi",
+	  "options": [
+		"-7",
+		"-6",
+		"-5",
+		"-4",
+		"-3",
+		"-2",
+		"-1",
+		"0",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+        "7"
+	  ],
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_027_oscillator_3_pitch",
+	  "type": "int",
+	  "name": "oscillator 3 pitch",
+	  "display_name": "Osc 3 Pitch",
+	  "units": "%",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 27
+	  },
+	  "range": [
+		-999,
+		999
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 pitch fine",
+	  "conv": "pitch_fine",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_028_oscillator_3_pitchwheel_range",
+	  "type": "int",
+	  "name": "oscillator 3 pitchwheel range",
+	  "display_name": "Osc 3 Wheel Range",
+	  "units": "",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 28
+	  },
+	  "range": [
+		0,
+		12
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 p wheel range",
+	  "conv": "integer"
+	},
+	{
+	  "id": "nrpn_029_oscillator1_level",
+	  "type": "int",
+	  "name": "Oscillator1 level",
+	  "display_name": "Osc 1 Level",
+	  "units": "%",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 29
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_030_oscillator2_level",
+	  "type": "int",
+	  "name": "Oscillator2 level",
+	  "display_name": "Osc 2 Level",
+	  "units": "%",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 30
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_031_oscillator3_level",
+	  "type": "int",
+	  "name": "Oscillator3 level",
+	  "display_name": "Osc 3 Level",
+	  "units": "%",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 31
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_032_ringmodulation_level",
+	  "type": "int",
+	  "name": "RingModulation level",
+	  "display_name": "RingMod Level",
+	  "units": "%",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 32
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "ringmod level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_033_noise_level",
+	  "type": "int",
+	  "name": "Noise level",
+	  "display_name": "Noise Level",
+	  "units": "%",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 33
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "noise level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_034_extin_level",
+	  "type": "int",
+	  "name": "ExtIn level",
+	  "display_name": "ExtIn Level",
+	  "units": "%",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 34
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "extin level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_035_oscillator1_balance",
+	  "type": "int",
+	  "name": "Oscillator1 balance",
+	  "display_name": "Osc 1 Balance",
+	  "units": "%",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 35
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 1 balance",
+	  "conv": "balance",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_036_oscillator2_balance",
+	  "type": "int",
+	  "name": "Oscillator2 balance",
+	  "display_name": "Osc 2 Balance",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 36
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 2 balance",
+	  "conv": "balance",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_037_oscillator3_balance",
+	  "type": "int",
+	  "name": "Oscillator3 balance",
+	  "display_name": "Osc 3 Balance",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 37
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "osc 3 balance",
+	  "conv": "balance",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_038_ringmodulation_balance",
+	  "type": "int",
+	  "name": "RingModulation balance",
+	  "display_name": "RingMod Balance",
+	  "units": "%",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 38
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "ringmod balance",
+	  "conv": "balance",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_039_noise_balance",
+	  "type": "int",
+	  "name": "Noise balance",
+	  "display_name": "Noise Balance",
+	  "units": "%",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 39
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "noise balance",
+	  "conv": "balance",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_040_extin_balance",
+	  "type": "int",
+	  "name": "ExtIn balance",
+	  "display_name": "ExtIn Balance",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 40
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "extin balance",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_041_series_level",
+	  "type": "int",
+	  "name": "series level",
+	  "display_name": "Series Level",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 41
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "drive level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_042_noise_type",
+	  "type": "list",
+	  "name": "noise type",
+	  "display_name": "Noise Type",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 42
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "noise type",
+	  "options": [
+		"pink",
+        "white"
+	  ]
+	},
+	{
+	  "id": "nrpn_043_filter_1_type",
+	  "type": "list",
+	  "name": "filter 1 type",
+	  "display_name": "Filter 1 Type",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 43
+	  },
+	  "range": [
+		0,
+		20
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 1 type",
+	  "options": [
+		"bypass",
+		"ob 2-pole lowpass",
+		"tb 3-pole lowpass",
+		"mg 4-pole lowpass",
+		"jp 4-pole lowpass",
+		"rp 4-pole lowpass",
+		"al 8-pole lowpass",
+		"ob 2-pole bandpass",
+		"ajl 6-pole bandpass",
+		"8ve dual bandpass",
+		"bandpass bandlimit",
+		"ob 2-pole highpass",
+		"op 4-pole highpass",
+		"vocal formant 1",
+		"vocal formant 2",
+		"vocal formant 3",
+		"comb filter 1",
+		"comb filter 2",
+		"comb filter 3",
+		"comb filter 4",
+        "phase warp"
+	  ]
+	},
+	{
+	  "id": "nrpn_044_filter_1_frequency",
+	  "type": "int",
+	  "name": "filter 1 frequency",
+	  "display_name": "Filter 1 Freq",
+	  "units": "Hz",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 44
+	  },
+	  "range": [
+		0,
+		1023
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "filter 1 freq",
+	  "conv": "filter_freq"
+	},
+	{
+	  "id": "nrpn_045_filter_1_resonance",
+	  "type": "int",
+	  "name": "filter 1 resonance",
+	  "display_name": "Filter 1 Res",
+	  "units": "%",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 45
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 1 res",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_046_filter_1_key_track",
+	  "type": "int",
+	  "name": "filter 1 key track",
+	  "display_name": "Filter 1 Key Track",
+	  "units": "%",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 46
+	  },
+	  "range": [
+		-100,
+		200
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 1 keytrack",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_047_filter_1_envelope_amount",
+	  "type": "int",
+	  "name": "filter 1 envelope amount",
+	  "display_name": "Filter 1 Env Amt",
+	  "units": "%",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 47
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 1 envamt",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_048_filter_2_relative_to",
+	  "type": "list",
+	  "name": "filter 2 relative to",
+	  "display_name": "Filter 2 Offset",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 48
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 1,
+	  "notes": "1",
+	  "options": [
+		"Absolute",
+        "Offset Filt 1"
+	  ]
+	},
+	{
+	  "id": "nrpn_049_filter_2_type",
+	  "type": "list",
+	  "name": "filter 2 type",
+	  "display_name": "Filter 2 Type",
+	  "units": "",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 49
+	  },
+	  "range": [
+		0,
+		20
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 2 type",
+	  "options": [
+		"bypass",
+		"ob 2-pole lowpass",
+		"tb 3-pole lowpass",
+		"mg 4-pole lowpass",
+		"jp 4-pole lowpass",
+		"rp 4-pole lowpass",
+		"al 8-pole lowpass",
+		"ob 2-pole bandpass",
+		"ajl 6-pole bandpass",
+		"8ve dual bandpass",
+		"bandpass bandlimit",
+		"ob 2-pole highpass",
+		"op 4-pole highpass",
+		"vocal formant 1",
+		"vocal formant 2",
+		"vocal formant 3",
+		"comb filter 1",
+		"comb filter 2",
+		"comb filter 3",
+		"comb filter 4",
+        "phase warp"
+	  ]
+	},
+	{
+	  "id": "nrpn_050_filter_2_frequency_absolute",
+	  "type": "int",
+	  "name": "filter 2 frequency absolute",
+	  "display_name": "Filter 2 Freq",
+	  "units": "Hz",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 50
+	  },
+	  "range": [
+		0,
+		1023
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "conv": "filter_freq"
+	},
+	{
+	  "id": "nrpn_051_filter_2_resonance",
+	  "type": "int",
+	  "name": "filter 2 resonance",
+	  "display_name": "Filter 2 Res",
+	  "units": "%",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 51
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 2 res",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_052_filter_2_key_track",
+	  "type": "int",
+	  "name": "filter 2 key track",
+	  "display_name": "Filter 2 Key Track",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 52
+	  },
+	  "range": [
+		-100,
+		200
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 2 keytrack",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_053_filter_2_envelope_amount",
+	  "type": "int",
+	  "name": "filter 2 envelope amount",
+	  "display_name": "Filter 2 Env Amt",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 53
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 2 envamt",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_054_filter_1_level",
+	  "type": "int",
+	  "name": "filter 1 level",
+	  "display_name": "Filter 1 Level",
+	  "units": "%",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 54
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 1 level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_055_filter_2_level",
+	  "type": "int",
+	  "name": "filter 2 level",
+	  "display_name": "Filter 2 Level",
+	  "units": "%",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 55
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 2 level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_056_pre_filter_level",
+	  "type": "int",
+	  "name": "pre-filter level",
+	  "display_name": "Pre-Filter Level",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 56
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "prefilter level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_057_filter_1_pan",
+	  "type": "int",
+	  "name": "filter 1 pan",
+	  "display_name": "Filter 1 Pan",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 57
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 1 pan",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_058_filter_2_pan",
+	  "type": "int",
+	  "name": "filter 2 pan",
+	  "display_name": "Filter 2 Pan",
+	  "units": "%",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 58
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "filter 2 pan",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_059_pre_filter_pan",
+	  "type": "int",
+	  "name": "pre-filter pan",
+	  "display_name": "Pre-Filter Pan",
+	  "units": "%",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 59
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "prefilter pan",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_060_pre_filter_source",
+	  "type": "list",
+	  "name": "pre-filter source",
+	  "display_name": "Pre-Filter Source",
+	  "units": "",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 60
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"osc 1",
+		"osc 2",
+		"osc 3",
+		"filt 1 input mix",
+		"filt 2 input mix",
+		"ringmod",
+        "noise"
+	  ]
+	},
+	{
+	  "id": "nrpn_061_filter_1_invert_phase",
+	  "type": "list",
+	  "name": "filter 1 invert phase",
+	  "display_name": "Filter 1 Invert",
+	  "units": "",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 61
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"positive",
+        "negative"
+	  ]
+	},
+	{
+	  "id": "nrpn_062_drive_type",
+	  "type": "list",
+	  "name": "drive type",
+	  "display_name": "Drive Type",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 62
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "drive type",
+	  "options": [
+		"bypass",
+		"compressor",
+		"rms limiter",
+		"tube overdrive",
+		"distortion",
+		"tube amp",
+        "fuzz pedal"
+	  ]
+	},
+	{
+	  "id": "nrpn_063_drive_level",
+	  "type": "int",
+	  "name": "drive level",
+	  "display_name": "Drive Level",
+	  "units": "%",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 63
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "drive level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_064_program_level",
+	  "type": "int",
+	  "name": "program level",
+	  "display_name": "Program Level",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 64
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_065_fx_mix",
+	  "type": "int",
+	  "name": "fx mix",
+	  "display_name": "FX Mix",
+	  "units": "",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 65
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_066_envelope_1_attack_time",
+	  "type": "int",
+	  "name": "envelope 1 attack time",
+	  "display_name": "Env 1 Attack Time",
+	  "units": "ms",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 66
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 1 attack time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_067_envelope_1_attack_slope",
+	  "type": "list",
+	  "name": "envelope 1 attack slope",
+	  "display_name": "Env 1 Attack Slope",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 67
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 1 attack slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_068_envelope_1_decay_time",
+	  "type": "int",
+	  "name": "envelope 1 decay time",
+	  "display_name": "Env 1 Decay Time",
+	  "units": "ms",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 68
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 1 decay time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_069_envelope_1_decay_slope",
+	  "type": "list",
+	  "name": "envelope 1 decay slope",
+	  "display_name": "Env 1 Decay Slope",
+	  "units": "",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 69
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 1 decay slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_070_envelope_1_sustain_time",
+	  "type": "int",
+	  "name": "envelope 1 sustain time",
+	  "display_name": "Env 1 Sustain Time",
+	  "units": "ms",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 70
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 1 sus time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_071_envelope_1_sustain_level",
+	  "type": "int",
+	  "name": "envelope 1 sustain level",
+	  "display_name": "Env 1 Sustain Level",
+	  "units": "%",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 71
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 1 sus level",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_072_envelope_1_release_time",
+	  "type": "int",
+	  "name": "envelope 1 release time",
+	  "display_name": "Env 1 Release Time",
+	  "units": "ms",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 72
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 1 release time",
+	  "conv": "release_time"
+	},
+	{
+	  "id": "nrpn_073_envelope_1_release_slope",
+	  "type": "list",
+	  "name": "envelope 1 release slope",
+	  "display_name": "Env 1 Release Slope",
+	  "units": "",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 73
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 1 release slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_074_envelope_1_velocity_to_envelope",
+	  "type": "int",
+	  "name": "envelope 1 velocity to envelope",
+	  "display_name": "Env 1 Velocity Amt",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 74
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_075_envelope_1_reset_every_note",
+	  "type": "list",
+	  "name": "envelope 1 reset every note",
+	  "display_name": "Env 1 Reset",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 75
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"every note",
+        "unless legato"
+	  ]
+	},
+	{
+	  "id": "nrpn_076_envelope_1_free_run",
+	  "type": "list",
+	  "name": "envelope 1 free run",
+	  "display_name": "Env 1 Free Run",
+	  "units": "",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 76
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 1 freerun",
+	  "options": [
+		"off",
+        "on"
+	  ]
+	},
+	{
+	  "id": "nrpn_077_envelope_1_loop",
+	  "type": "list",
+	  "name": "envelope 1 loop",
+	  "display_name": "Env 1 Loop",
+	  "units": "",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 77
+	  },
+	  "range": [
+		0,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 1 loop",
+	  "options": [
+		"off",
+		"attack/decay",
+		"entire envelope",
+        "while note held"
+	  ]
+	},
+	{
+	  "id": "nrpn_078_envelope_1_sustain_pedal",
+	  "type": "list",
+	  "name": "envelope 1 sustain pedal",
+	  "display_name": "Env 1 Sustain Pedal",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 78
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 1 sus pedal",
+	  "options": [
+		"off",
+        "on"
+	  ]
+	},
+	{
+	  "id": "nrpn_079_envelope_2_attack_time",
+	  "type": "int",
+	  "name": "envelope 2 attack time",
+	  "display_name": "Env 2 Attack Time",
+	  "units": "ms",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 79
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 2 attack time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_080_envelope_2_attack_slope",
+	  "type": "list",
+	  "name": "envelope 2 attack slope",
+	  "display_name": "Env 2 Attack Slope",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 80
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 2 attack slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_081_envelope_2_decay_time",
+	  "type": "int",
+	  "name": "envelope 2 decay time",
+	  "display_name": "Env 2 Decay Time",
+	  "units": "ms",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 81
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 2 decay time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_082_envelope_2_decay_slope",
+	  "type": "list",
+	  "name": "envelope 2 decay slope",
+	  "display_name": "Env 2 Decay Slope",
+	  "units": "",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 82
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 2 decay slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_083_envelope_2_sustain_time",
+	  "type": "int",
+	  "name": "envelope 2 sustain time",
+	  "display_name": "Env 2 Sustain Time",
+	  "units": "ms",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 83
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 2 sus time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_084_envelope_2_sustain_level",
+	  "type": "int",
+	  "name": "envelope 2 sustain level",
+	  "display_name": "Env 2 Sustain Level",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 84
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 2 sus level",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_085_envelope_2_release_time",
+	  "type": "int",
+	  "name": "envelope 2 release time",
+	  "display_name": "Env 2 Release Time",
+	  "units": "ms",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 85
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 2 release time",
+	  "conv": "release_time"
+	},
+	{
+	  "id": "nrpn_086_envelope_2_release_slope",
+	  "type": "list",
+	  "name": "envelope 2 release slope",
+	  "display_name": "Env 2 Release Slope",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 86
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 2 release slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_087_envelope_2_velocity_to_envelope",
+	  "type": "int",
+	  "name": "envelope 2 velocity to envelope",
+	  "display_name": "Env 2 Velocity Amt",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 87
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_088_envelope_2_reset_every_note",
+	  "type": "list",
+	  "name": "envelope 2 reset every note",
+	  "display_name": "Env 2 Reset",
+	  "units": "",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 88
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"every note",
+        "unless legato"
+	  ]
+	},
+	{
+	  "id": "nrpn_089_envelope_2_free_run",
+	  "type": "list",
+	  "name": "envelope 2 free run",
+	  "display_name": "Env 2 Free Run",
+	  "units": "",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 89
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 2 freerun",
+	  "options": [
+		"release",
+        "freerun"
+	  ]
+	},
+	{
+	  "id": "nrpn_090_envelope_2_loop",
+	  "type": "list",
+	  "name": "envelope 2 loop",
+	  "display_name": "Env 2 Loop",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 90
+	  },
+	  "range": [
+		0,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 2 loop",
+	  "options": [
+		"off",
+		"attack/decay",
+		"entire envelope",
+        "while note held"
+	  ]
+	},
+	{
+	  "id": "nrpn_091_envelope_2_sustain_pedal",
+	  "type": "list",
+	  "name": "envelope 2 sustain pedal",
+	  "display_name": "Env 2 Sustain Pedal",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 91
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 2 sus pedal",
+	  "options": [
+		"off",
+        "on"
+	  ]
+	},
+	{
+	  "id": "nrpn_092_envelope_3_attack_time",
+	  "type": "int",
+	  "name": "envelope 3 attack time",
+	  "display_name": "Env 3 Attack Time",
+	  "units": "ms",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 92
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 3 attack time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_093_envelope_3_attack_slope",
+	  "type": "list",
+	  "name": "envelope 3 attack slope",
+	  "display_name": "Env 3 Attack Slope",
+	  "units": "",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 93
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 3 attack slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_094_envelope_3_decay_time",
+	  "type": "int",
+	  "name": "envelope 3 decay time",
+	  "display_name": "Env 3 Decay Time",
+	  "units": "ms",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 94
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 3 decay time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_095_envelope_3_decay_slope",
+	  "type": "list",
+	  "name": "envelope 3 decay slope",
+	  "display_name": "Env 3 Decay Slope",
+	  "units": "",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 95
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 3 decay slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_096_envelope_3_sustain_time",
+	  "type": "int",
+	  "name": "envelope 3 sustain time",
+	  "display_name": "Env 3 Sustain Time",
+	  "units": "ms",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 96
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 3 sus time",
+	  "conv": "env_time"
+	},
+	{
+	  "id": "nrpn_097_envelope_3_sustain_level",
+	  "type": "int",
+	  "name": "envelope 3 sustain level",
+	  "display_name": "Env 3 Sustain Level",
+	  "units": "%",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 97
+	  },
+	  "range": [
+		-100,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 3 sus level",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_098_envelope_3_release_time",
+	  "type": "int",
+	  "name": "envelope 3 release time",
+	  "display_name": "Env 3 Release Time",
+	  "units": "ms",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 98
+	  },
+	  "range": [
+		0,
+		255
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "env 3 release time",
+	  "conv": "release_time"
+	},
+	{
+	  "id": "nrpn_099_envelope_3_release_slope",
+	  "type": "list",
+	  "name": "envelope 3 release slope",
+	  "display_name": "Env 3 Release Slope",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 99
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 3 release slope",
+	  "options": [
+		"lin",
+		"exp+",
+        "exp-"
+	  ]
+	},
+	{
+	  "id": "nrpn_100_envelope_3_velocity_to_envelope",
+	  "type": "int",
+	  "name": "envelope 3 velocity to envelope",
+	  "display_name": "Env 3 Velocity Amt",
+	  "units": "",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 100
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_101_envelope_3_reset_every_note",
+	  "type": "list",
+	  "name": "envelope 3 reset every note",
+	  "display_name": "Env 3 Reset",
+	  "units": "",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 101
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"every note",
+        "unless legato"
+	  ]
+	},
+	{
+	  "id": "nrpn_102_envelope_3_free_run",
+	  "type": "list",
+	  "name": "envelope 3 free run",
+	  "display_name": "Env 3 Free Run",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 102
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 3 freerun",
+	  "options": [
+		"release",
+        "freerun"
+	  ]
+	},
+	{
+	  "id": "nrpn_103_envelope_3_loop",
+	  "type": "list",
+	  "name": "envelope 3 loop",
+	  "display_name": "Env 3 Loop",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 103
+	  },
+	  "range": [
+		0,
+		3
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 3 loop",
+	  "options": [
+		"off",
+		"attack/decay",
+		"entire envelope",
+        "while note held"
+	  ]
+	},
+	{
+	  "id": "nrpn_104_envelope_3_sustain_pedal",
+	  "type": "list",
+	  "name": "envelope 3 sustain pedal",
+	  "display_name": "Env 3 Sustain Pedal",
+	  "units": "",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 104
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "env 3 sus pedal",
+	  "options": [
+		"off",
+        "on"
+	  ]
+	},
+	{
+	  "id": "nrpn_105_lfo_1_tempo_sync",
+	  "type": "list",
+	  "name": "lfo 1 tempo sync",
+	  "display_name": "LFO 1 Tempo Sync",
+	  "units": "",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 105
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "lfo 1 tempo sync",
+	  "options": [
+		"fixed rate",
+        "follow tempo"
+	  ]
+	},
+	{
+	  "id": "nrpn_106_lfo_1_rate_free",
+	  "type": "int",
+	  "name": "lfo 1 rate (free)",
+	  "display_name": "LFO 1 Rate (free)",
+	  "units": "Hz",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 106
+	  },
+	  "range": [
+		0,
+		1023
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "lfo 1 rate",
+	  "conv": "lfo_freq"
+	},
+	{
+	  "id": "nrpn_107_lfo_1_reset",
+	  "type": "list",
+	  "name": "lfo 1 reset",
+	  "display_name": "LFO 1 Reset",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 107
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "lfo 1 reset",
+	  "options": [
+		"mono",
+		"poly",
+		"key mono",
+		"key poly",
+		"legato mono",
+		"legato poly",
+        "tempo lock"
+	  ]
+	},
+	{
+	  "id": "nrpn_108_m1_slider_influencelfo",
+	  "type": "int",
+	  "name": "m1 slider influencelfo",
+	  "display_name": "LFO 1 M1 Slider",
+	  "units": "",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 108
+	  },
+	  "range": [
+		1,
+		0
+	  ],
+	  "scaling": "linear",
+	  "value": 1,
+	  "notes": "100"
+	},
+	{
+	  "id": "nrpn_109_lfo_2_tempo_sync",
+	  "type": "list",
+	  "name": "lfo 2 tempo sync",
+	  "display_name": "LFO 2 Tempo Sync",
+	  "units": "",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 109
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "lfo 2 tempo sync",
+	  "options": [
+		"on",
+        "off"
+	  ]
+	},
+	{
+	  "id": "nrpn_110_lfo_2_rate_free",
+	  "type": "int",
+	  "name": "lfo 2 rate (free)",
+	  "display_name": "LFO 2 Rate (free)",
+	  "units": "Hz",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 110
+	  },
+	  "range": [
+		0,
+		1023
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "lfo 2 rate",
+	  "conv": "lfo_freq"
+	},
+	{
+	  "id": "nrpn_111_lfo_2_reset",
+	  "type": "list",
+	  "name": "lfo 2 reset",
+	  "display_name": "LFO 2 Reset",
+	  "units": "",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 111
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "lfo 2 reset",
+	  "options": [
+		"mono",
+		"poly",
+		"key mono",
+		"key poly",
+		"legato mono",
+		"legato poly",
+        "tempo lock"
+	  ]
+	},
+	{
+	  "id": "nrpn_112_m1_slider_influencelfo",
+	  "type": "int",
+	  "name": "m1 slider influencelfo",
+	  "display_name": "LFO 2 M1 Slider",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 112
+	  },
+	  "range": [
+		2,
+		0
+	  ],
+	  "scaling": "linear",
+	  "value": 2,
+	  "notes": "100"
+	},
+	{
+	  "id": "nrpn_113_s_h_tempo_sync",
+	  "type": "list",
+	  "name": "S&H tempo sync",
+	  "display_name": "S&H Tempo Sync",
+	  "units": "",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 113
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "sh tempo sync",
+	  "options": [
+		"fixed rate",
+        "follow tempo"
+	  ]
+	},
+	{
+	  "id": "nrpn_114_s_h_rate_free",
+	  "type": "int",
+	  "name": "S&H rate(free)",
+	  "display_name": "S&H Rate (free)",
+	  "units": "Hz",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 114
+	  },
+	  "range": [
+		0,
+		1023
+	  ],
+	  "scaling": "log",
+	  "value": 0,
+	  "perl_name": "sh rate",
+	  "conv": "lfo_freq"
+	},
+	{
+	  "id": "nrpn_115_s_h_reset",
+	  "type": "list",
+	  "name": "S&H reset",
+	  "display_name": "S&H Reset",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 115
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "sh reset",
+	  "options": [
+		"mono",
+		"poly",
+		"key mono",
+		"key poly",
+		"legato mono",
+		"legato poly",
+        "tempo lock"
+	  ]
+	},
+	{
+	  "id": "nrpn_116_s_h_input",
+	  "type": "list",
+	  "name": "S&H input",
+	  "display_name": "S&H Input",
+	  "units": "",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 116
+	  },
+	  "range": [
+		0,
+		112
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "sh input",
+	  "options": [
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_117_s_h_smoothing",
+	  "type": "int",
+	  "name": "S&H smoothing",
+	  "display_name": "S&H Smoothing",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 117
+	  },
+	  "range": [
+		0,
+		100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "sh smoothing",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_118_tracking_input",
+	  "type": "list",
+	  "name": "tracking input",
+	  "display_name": "Tracking Input",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 118
+	  },
+	  "range": [
+		0,
+		111
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "tracking input",
+	  "options": [
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_119_tracking_preset",
+	  "type": "list",
+	  "name": "tracking preset",
+	  "display_name": "Tracking Preset",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 119
+	  },
+	  "range": [
+		0,
+		9
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "tracking preset",
+	  "options": [
+		"custom",
+		"bypass",
+		"negate",
+		"abs val",
+		"neg abs",
+		"exp+",
+		"exp-",
+		"zero",
+		"maximum",
+        "minimum"
+	  ]
+	},
+	{
+	  "id": "nrpn_120_tracking_gridsize",
+	  "type": "list",
+	  "name": "tracking gridsize",
+	  "units": "",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 120
+	  },
+	  "range": [
+		0,
+		1
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "tracking preset",
+	  "options": [
+		"12 pts",
+        "16 pts"
+	  ]
+	},
+	{
+	  "id": "nrpn_121_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 121
+	  },
+	  "range": [
+		-16,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -16,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_122_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 122
+	  },
+	  "range": [
+		-15,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -15,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_123_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 123
+	  },
+	  "range": [
+		-14,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -14,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_124_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 124
+	  },
+	  "range": [
+		-13,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -13,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_125_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 125
+	  },
+	  "range": [
+		-12,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -12,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_126_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 126
+	  },
+	  "range": [
+		-11,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -11,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_127_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 0,
+		"lsb": 127
+	  },
+	  "range": [
+		-10,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -10,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_128_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 0
+	  },
+	  "range": [
+		-9,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -9,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_129_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 1
+	  },
+	  "range": [
+		-8,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -8,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_130_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 2
+	  },
+	  "range": [
+		-7,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -7,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_131_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 3
+	  },
+	  "range": [
+		-6,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -6,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_132_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 4
+	  },
+	  "range": [
+		-5,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -5,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_133_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 5
+	  },
+	  "range": [
+		-4,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -4,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_134_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 6
+	  },
+	  "range": [
+		-3,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -3,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_135_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 7
+	  },
+	  "range": [
+		-2,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -2,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_136_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 8
+	  },
+	  "range": [
+		-1,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": -1,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_137_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 9
+	  },
+	  "range": [
+		0,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_138_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 10
+	  },
+	  "range": [
+		1,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 1,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_139_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 11
+	  },
+	  "range": [
+		2,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 2,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_140_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 12
+	  },
+	  "range": [
+		3,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 3,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_141_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 13
+	  },
+	  "range": [
+		4,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 4,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_142_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 14
+	  },
+	  "range": [
+		5,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 5,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_143_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 15
+	  },
+	  "range": [
+		6,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 6,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_144_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 16
+	  },
+	  "range": [
+		7,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 7,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_145_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 17
+	  },
+	  "range": [
+		8,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 8,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_146_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 18
+	  },
+	  "range": [
+		9,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 9,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_147_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 19
+	  },
+	  "range": [
+		10,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 10,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_148_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 20
+	  },
+	  "range": [
+		11,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 11,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_149_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 21
+	  },
+	  "range": [
+		12,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 12,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_150_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 22
+	  },
+	  "range": [
+		13,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 13,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_151_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 23
+	  },
+	  "range": [
+		14,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 14,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_152_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 24
+	  },
+	  "range": [
+		15,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 15,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_153_tracking_point",
+	  "type": "int",
+	  "name": "tracking point",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 25
+	  },
+	  "range": [
+		16,
+		-100
+	  ],
+	  "scaling": "linear",
+	  "value": 16,
+	  "notes": "100",
+	  "perl_name": "tracking point 9",
+	  "conv": "percent"
+	},
+	{
+	  "id": "nrpn_154_program_category",
+	  "type": "int",
+	  "name": "program category",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 26
+	  },
+	  "range": [
+		0,
+		8
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_155_knob_x",
+	  "type": "int",
+	  "name": "Knob X",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 27
+	  },
+	  "range": [
+		0,
+		161
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_156_knob_y",
+	  "type": "int",
+	  "name": "Knob Y",
+	  "units": "",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 28
+	  },
+	  "range": [
+		0,
+		161
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_157_knob_z",
+	  "type": "int",
+	  "name": "Knob Z",
+	  "units": "",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 29
+	  },
+	  "range": [
+		0,
+		161
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_158_filter_2_frequency_relative",
+	  "type": "int",
+	  "name": "filter 2 frequency relative",
+	  "display_name": "Filter 2 Offset",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 30
+	  },
+	  "range": [
+		-400,
+		400
+	  ],
+	  "scaling": "linear",
+	  "value": 0
+	},
+	{
+	  "id": "nrpn_159_lfo_1_rate_follow_tempo",
+	  "type": "list",
+	  "name": "lfo 1 rate (follow tempo)",
+	  "display_name": "LFO 1 Sync Rate",
+	  "units": "",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 31
+	  },
+	  "range": [
+		0,
+		24
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"x1/16 - 4 whole",
+		"x1/12 - dot 2 wh",
+		"x3/32 - 4 whl tr",
+		"x1/8 - 2 whote",
+		"x1/6 - dot whole",
+		"x3/16 - 2 whl tr",
+		"x1/4 - whole",
+		"x1/3 - dot half",
+		"x3/8 - whole trp",
+		"x1/2 - half note",
+		"x2/3 - dot qrtr",
+		"x3/4 - half trip",
+		"x1 - quarter",
+		"x1 1/3 - dot 8",
+		"x1 1/2 - qrtr tr",
+		"x2 - 8th note",
+		"x2 2/3 - dot 16",
+		"x3 - 8th triplet",
+		"x4 - 16th note",
+		"x5 1/3 - dot 32",
+		"x6 - 16th triplt",
+		"x8 - 32nd note",
+		"x10 2/3 - dot 64",
+		"x12 - 32nd trip",
+        "x16 - 64th note"
+	  ]
+	},
+	{
+	  "id": "nrpn_160_lfo_2_rate_follow_tempo",
+	  "type": "list",
+	  "name": "lfo 2 rate (follow tempo)",
+	  "display_name": "LFO 1 Sync Rate",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 32
+	  },
+	  "range": [
+		0,
+		24
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "options": [
+		"x1/16 - 4 whole",
+		"x1/12 - dot 2 wh",
+		"x3/32 - 4 whl tr",
+		"x1/8 - 2 whote",
+		"x1/6 - dot whole",
+		"x3/16 - 2 whl tr",
+		"x1/4 - whole",
+		"x1/3 - dot half",
+		"x3/8 - whole trp",
+		"x1/2 - half note",
+		"x2/3 - dot qrtr",
+		"x3/4 - half trip",
+		"x1 - quarter",
+		"x1 1/3 - dot 8",
+		"x1 1/2 - qrtr tr",
+		"x2 - 8th note",
+		"x2 2/3 - dot 16",
+		"x3 - 8th triplet",
+		"x4 - 16th note",
+		"x5 1/3 - dot 32",
+		"x6 - 16th triplt",
+		"x8 - 32nd note",
+		"x10 2/3 - dot 64",
+		"x12 - 32nd trip",
+        "x16 - 64th note"
+	  ]
+	},
+	{
+	  "id": "nrpn_161_s_h_rate_synced",
+	  "type": "list",
+	  "name": "S&H rate(synced)",
+	  "display_name": "S&H Sync Rate",
+	  "units": "",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 33
+	  },
+	  "range": [
+		0,
+		24
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "sh tempo sync",
+	  "options": [
+		"x1/16 - 4 whole",
+		"x1/12 - dot 2 wh",
+		"x3/32 - 4 whl tr",
+		"x1/8 - 2 whote",
+		"x1/6 - dot whole",
+		"x3/16 - 2 whl tr",
+		"x1/4 - whole",
+		"x1/3 - dot half",
+		"x3/8 - whole trp",
+		"x1/2 - half note",
+		"x2/3 - dot qrtr",
+		"x3/4 - half trip",
+		"x1 - quarter",
+		"x1 1/3 - dot 8",
+		"x1 1/2 - qrtr tr",
+		"x2 - 8th note",
+		"x2 2/3 - dot 16",
+		"x3 - 8th triplet",
+		"x4 - 16th note",
+		"x5 1/3 - dot 32",
+		"x6 - 16th triplt",
+		"x8 - 32nd note",
+		"x10 2/3 - dot 64",
+		"x12 - 32nd trip",
+        "x16 - 64th note"
+	  ]
+	},
+	{
+	  "id": "nrpn_180_patch_cable_1_source",
+	  "type": "list",
+	  "name": "patch cable 1 source",
+	  "units": "",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 52
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 1 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_181_patch_cable_1_destination",
+	  "type": "list",
+	  "name": "patch cable 1 destination",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 53
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 1 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_182_patch_cable_1_level",
+	  "type": "int",
+	  "name": "patch cable 1 level",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 54
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 1 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_183_patch_cable_1_offset",
+	  "type": "int",
+	  "name": "patch cable 1 offset",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 55
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 1 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_184_patch_cable_2_source",
+	  "type": "list",
+	  "name": "patch cable 2 source",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 56
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 2 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_185_patch_cable_2_destination",
+	  "type": "list",
+	  "name": "patch cable 2 destination",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 57
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 2 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_186_patch_cable_2_level",
+	  "type": "int",
+	  "name": "patch cable 2 level",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 58
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 2 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_187_patch_cable_2_offset",
+	  "type": "int",
+	  "name": "patch cable 2 offset",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 59
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 2 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_188_patch_cable_3_source",
+	  "type": "list",
+	  "name": "patch cable 3 source",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 60
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 3 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_189_patch_cable_3_destination",
+	  "type": "list",
+	  "name": "patch cable 3 destination",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 61
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 3 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_190_patch_cable_3_level",
+	  "type": "int",
+	  "name": "patch cable 3 level",
+	  "units": "%",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 62
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 3 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_191_patch_cable_3_offset",
+	  "type": "int",
+	  "name": "patch cable 3 offset",
+	  "units": "%",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 63
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 3 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_192_patch_cable_4_source",
+	  "type": "list",
+	  "name": "patch cable 4 source",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 64
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 4 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_193_patch_cable_4_destination",
+	  "type": "list",
+	  "name": "patch cable 4 destination",
+	  "units": "",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 65
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 4 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_194_patch_cable_4_level",
+	  "type": "int",
+	  "name": "patch cable 4 level",
+	  "units": "%",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 66
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 4 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_195_patch_cable_4_offset",
+	  "type": "int",
+	  "name": "patch cable 4 offset",
+	  "units": "%",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 67
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 4 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_196_patch_cable_5_source",
+	  "type": "list",
+	  "name": "patch cable 5 source",
+	  "units": "",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 68
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 5 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_197_patch_cable_5_destination",
+	  "type": "list",
+	  "name": "patch cable 5 destination",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 69
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 5 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_198_patch_cable_5_level",
+	  "type": "int",
+	  "name": "patch cable 5 level",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 70
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 5 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_199_patch_cable_5_offset",
+	  "type": "int",
+	  "name": "patch cable 5 offset",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 71
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 5 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_200_patch_cable_6_source",
+	  "type": "list",
+	  "name": "patch cable 6 source",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 72
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 6 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_201_patch_cable_6_destination",
+	  "type": "list",
+	  "name": "patch cable 6 destination",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 73
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 6 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_202_patch_cable_6_level",
+	  "type": "int",
+	  "name": "patch cable 6 level",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 74
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 6 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_203_patch_cable_6_offset",
+	  "type": "int",
+	  "name": "patch cable 6 offset",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 75
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 6 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_204_patch_cable_7_source",
+	  "type": "list",
+	  "name": "patch cable 7 source",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 76
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 7 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_205_patch_cable_7_destination",
+	  "type": "list",
+	  "name": "patch cable 7 destination",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 77
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 7 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_206_patch_cable_7_level",
+	  "type": "int",
+	  "name": "patch cable 7 level",
+	  "units": "%",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 78
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 7 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_207_patch_cable_7_offset",
+	  "type": "int",
+	  "name": "patch cable 7 offset",
+	  "units": "%",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 79
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 7 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_208_patch_cable_8_source",
+	  "type": "list",
+	  "name": "patch cable 8 source",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 80
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 8 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_209_patch_cable_8_destination",
+	  "type": "list",
+	  "name": "patch cable 8 destination",
+	  "units": "",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 81
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 8 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_210_patch_cable_8_level",
+	  "type": "int",
+	  "name": "patch cable 8 level",
+	  "units": "%",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 82
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 8 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_211_patch_cable_8_offset",
+	  "type": "int",
+	  "name": "patch cable 8 offset",
+	  "units": "%",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 83
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 8 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_212_patch_cable_9_source",
+	  "type": "list",
+	  "name": "patch cable 9 source",
+	  "units": "",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 84
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 9 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_213_patch_cable_9_destination",
+	  "type": "list",
+	  "name": "patch cable 9 destination",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 85
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 9 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_214_patch_cable_9_level",
+	  "type": "int",
+	  "name": "patch cable 9 level",
+	  "units": "%",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 86
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 9 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_215_patch_cable_9_offset",
+	  "type": "int",
+	  "name": "patch cable 9 offset",
+	  "units": "%",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 87
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 9 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_216_patch_cable_10_source",
+	  "type": "list",
+	  "name": "patch cable 10 source",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 88
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 10 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_217_patch_cable_10_destination",
+	  "type": "list",
+	  "name": "patch cable 10 destination",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 89
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 10 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_218_patch_cable_10_level",
+	  "type": "int",
+	  "name": "patch cable 10 level",
+	  "units": "%",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 90
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 10 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_219_patch_cable_10_offset",
+	  "type": "int",
+	  "name": "patch cable 10 offset",
+	  "units": "%",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 91
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 10 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_220_patch_cable_11_source",
+	  "type": "list",
+	  "name": "patch cable 11 source",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 92
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 11 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_221_patch_cable_11_destination",
+	  "type": "list",
+	  "name": "patch cable 11 destination",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 93
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 11 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_222_patch_cable_11_level",
+	  "type": "int",
+	  "name": "patch cable 11 level",
+	  "units": "%",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 94
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 11 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_223_patch_cable_11_offset",
+	  "type": "int",
+	  "name": "patch cable 11 offset",
+	  "units": "%",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 95
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 11 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_224_patch_cable_12_source",
+	  "type": "list",
+	  "name": "patch cable 12 source",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 96
+	  },
+	  "range": [
+		0,
+		114
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 12 source",
+	  "options": [
+		"none",
+		"note-on velocity",
+		"release velocity",
+		"key track",
+		"m1 wheel",
+		"m2 wheel",
+		"pitch wheel",
+		"sustain pedal",
+		"expression pedal",
+		"amp env level",
+		"filter env level",
+		"pitch/mod env level",
+		"lfo 1 sine",
+		"lfo 1 cosine",
+		"lfo 1 triangle",
+		"lfo 1 cos-triangle",
+		"lfo 1 saw",
+		"lfo 1 cos-saw",
+		"lfo 1 square",
+		"lfo 1 cos-square",
+		"lfo 2 sine",
+		"lfo 2 cosine",
+		"lfo 2 triangle",
+		"lfo 2 cos-triangle",
+		"lfo 2 saw",
+		"lfo 2 cos-saw",
+		"lfo 2 square",
+		"lfo 2 cos-square",
+		"sh output",
+		"voice random",
+		"global random",
+		"portamento level",
+		"portamento effect",
+		"tracking generator",
+		"step track",
+		"midi channel pressure",
+		"midi poly aftertouch",
+		"midi cc 1",
+		"midi cc 2",
+		"midi cc 3",
+		"midi cc 4",
+		"midi cc 7",
+		"midi cc 8",
+		"midi cc 9",
+		"midi cc 10",
+		"midi cc 11",
+		"midi cc 12",
+		"midi cc 13",
+		"midi cc 14",
+		"midi cc 15",
+		"midi cc 16",
+		"midi cc 17",
+		"midi cc 18",
+		"midi cc 19",
+		"midi cc 20",
+		"midi cc 21",
+		"midi cc 22",
+		"midi cc 23",
+		"midi cc 24",
+		"midi cc 25",
+		"midi cc 26",
+		"midi cc 27",
+		"midi cc 28",
+		"midi cc 29",
+		"midi cc 30",
+		"midi cc 31",
+		"midi cc 66",
+		"midi cc 67",
+		"midi cc 68",
+		"midi cc 69",
+		"midi cc 70",
+		"midi cc 71",
+		"midi cc 72",
+		"midi cc 73",
+		"midi cc 74",
+		"midi cc 75",
+		"midi cc 76",
+		"midi cc 77",
+		"midi cc 78",
+		"midi cc 79",
+		"midi cc 80",
+		"midi cc 81",
+		"midi cc 82",
+		"midi cc 83",
+		"midi cc 84",
+		"midi cc 85",
+		"midi cc 86",
+		"midi cc 87",
+		"midi cc 88",
+		"midi cc 89",
+		"midi cc 90",
+		"midi cc 91",
+		"midi cc 92",
+		"midi cc 93",
+		"midi cc 94",
+		"midi cc 95",
+		"midi cc 102",
+		"midi cc 103",
+		"midi cc 104",
+		"midi cc 105",
+		"midi cc 106",
+		"midi cc 107",
+		"midi cc 108",
+		"midi cc 109",
+		"midi cc 110",
+		"midi cc 111",
+		"midi cc 112",
+		"midi cc 113",
+		"midi cc 114",
+		"midi cc 115",
+		"midi cc 116",
+		"midi cc 117",
+		"midi cc 118",
+		"midi cc 119",
+        "key track extreme"
+	  ]
+	},
+	{
+	  "id": "nrpn_225_patch_cable_12_destination",
+	  "type": "list",
+	  "name": "patch cable 12 destination",
+	  "units": "",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 97
+	  },
+	  "range": [
+		0,
+		79
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 12 dest",
+	  "options": [
+		"none",
+		"voice pitch",
+		"osc 1 pitch full",
+		"osc 2 pitch full",
+		"osc 3 pitch full",
+		"osc 1 pitch narrow",
+		"osc 2 pitch narrow",
+		"osc 3 pitch narrow",
+		"osc 1 shape",
+		"osc 2 shape",
+		"osc 3 shape",
+		"osc fm level",
+		"osc 1 level",
+		"osc 2 level",
+		"osc 3 level",
+		"ring mod level",
+		"noise level",
+		"ext in level",
+		"osc 1 balance",
+		"osc 2 balance",
+		"osc 3 balance",
+		"ring mod balance",
+		"noise balance",
+		"ext in balance",
+		"f1->f2 level",
+		"portamento time",
+		"unison detune",
+		"filter 1 freq",
+		"filter 1 res",
+		"filter 1 env mod",
+		"filter 1 keytrack",
+		"filter 2 freq",
+		"filter 2 res",
+		"filter 2 env mod",
+		"filter 2 keytrack",
+		"lfo 1 rate",
+		"lfo 1 amplitude",
+		"lfo 2 rate",
+		"lfo 2 amplitude",
+		"s&h rate",
+		"s&h smoothing",
+		"s&h amplitude",
+		"filter 1 level",
+		"filter 2 level",
+		"pre-filter level",
+		"filter 1 pan",
+		"filter 2 pan",
+		"pre-filter pan",
+		"drive level",
+		"program level",
+		"main/aux balance",
+		"pan",
+		"amp env amplitude",
+		"amp env rate",
+		"amp env attack",
+		"amp env decay",
+		"amp env sust time",
+		"amp env sust level",
+		"amp env release",
+		"filter env amplitude",
+		"filter env rate",
+		"filter env attack",
+		"filter env decay",
+		"filter env sust time",
+		"filter env sust level",
+		"filter env release",
+		"p/m env amplitude",
+		"p/m env rate",
+		"p/m env attack",
+		"p/m env decay",
+		"p/m env sust time",
+		"p/m env sust level",
+		"p/m env release",
+		"dummy",
+		"effects mix",
+		"effects parameter a",
+		"effects parameter b",
+		"effects parameter c",
+		"effects parameter d",
+        "voice pitch narrow"
+	  ]
+	},
+	{
+	  "id": "nrpn_226_patch_cable_12_level",
+	  "type": "int",
+	  "name": "patch cable 12 level",
+	  "units": "%",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 98
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 12 level",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_227_patch_cable_12_offset",
+	  "type": "int",
+	  "name": "patch cable 12 offset",
+	  "units": "%",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 99
+	  },
+	  "range": [
+		-1000,
+		1000
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "mod 12 offset",
+	  "conv": "tenths_of_percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_230_fx_balance",
+	  "type": "int",
+	  "name": "fx balance",
+	  "units": "%",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 102
+	  },
+	  "range": [
+		-50,
+		50
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "extin balance",
+	  "conv": "percent",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_231_fx_type",
+	  "type": "list",
+	  "name": "fx type",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 103
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "6",
+	  "perl_name": "fx type",
+	  "options": [
+		"bypass",
+		"super phaser",
+		"string phaser",
+		"theta flanger",
+		"thru 0 flanger",
+		"chorus",
+        "vocoder"
+	  ]
+	},
+	{
+	  "id": "nrpn_232_fx_param_a",
+	  "type": "int",
+	  "name": "fx param a",
+	  "units": "",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 104
+	  },
+	  "range": [
+		-128,
+		127
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param a",
+	  "conv": "integer_8bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_233_fx_param_b",
+	  "type": "int",
+	  "name": "fx param b",
+	  "units": "",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 105
+	  },
+	  "range": [
+		-128,
+		127
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param b",
+	  "conv": "integer_8bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_234_fx_param_c",
+	  "type": "int",
+	  "name": "fx param c",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 106
+	  },
+	  "range": [
+		-128,
+		127
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param c",
+	  "conv": "integer_8bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_235_fx_param_d",
+	  "type": "int",
+	  "name": "fx param d",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 107
+	  },
+	  "range": [
+		-128,
+		127
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param d",
+	  "conv": "integer_8bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_236_fx_param_e",
+	  "type": "int",
+	  "name": "fx param e",
+	  "units": "",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 108
+	  },
+	  "range": [
+		-128,
+		127
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param e",
+	  "conv": "integer_8bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_237_fx_param_f",
+	  "type": "int",
+	  "name": "fx param f",
+	  "units": "",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 109
+	  },
+	  "range": [
+		-128,
+		127
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param f",
+	  "conv": "integer_8bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_238_fx_param_g",
+	  "type": "int",
+	  "name": "fx param g",
+	  "units": "",
+	  "controller": 10,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 110
+	  },
+	  "range": [
+		-128,
+		127
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param g",
+	  "conv": "integer_8bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_239_fx_param_h_lfo_synced",
+	  "type": "list",
+	  "name": "fx param h lfo synced",
+	  "units": "",
+	  "controller": 11,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 111
+	  },
+	  "range": [
+		0,
+		24
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx param c synced",
+	  "options": [
+		"x 16",
+		"x 12",
+		"x 10 2/3",
+		"x 8",
+		"x 6",
+		"x 5 1/3",
+		"x 4",
+		"x 3",
+		"x 2 2/3",
+		"x 2",
+		"x 1 1/2",
+		"x 1 1/3",
+		"x 1",
+		"x 3/4",
+		"x 2/3",
+		"x 1/2",
+		"x 3/8",
+		"x 1/3",
+		"x 1/4",
+		"x 3/16",
+		"x 1/6",
+		"x 1/8",
+		"x 3/32",
+		"x 1/12",
+        "x 1/16"
+	  ]
+	},
+	{
+	  "id": "nrpn_245_fx2_type",
+	  "type": "list",
+	  "name": "fx2 type",
+	  "units": "",
+	  "controller": 12,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 117
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx2 type",
+	  "options": [
+		"bypass",
+		"mono delay",
+		"stereo delay",
+		"split L/R delay",
+		"hall reverb",
+		"plate reverb",
+        "room reverb"
+	  ]
+	},
+	{
+	  "id": "nrpn_246_fx2_param_a",
+	  "type": "int",
+	  "name": "fx2 param a",
+	  "units": "",
+	  "controller": 13,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 118
+	  },
+	  "range": [
+		-32768,
+		32767
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "***",
+	  "perl_name": "fx2 param a",
+	  "conv": "integer_16bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_247_fx2_param_b",
+	  "type": "int",
+	  "name": "fx2 param b",
+	  "units": "",
+	  "controller": 14,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 119
+	  },
+	  "range": [
+		-32768,
+		32767
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "***",
+	  "perl_name": "fx2 param b",
+	  "conv": "integer_16bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_248_fx2_param_c",
+	  "type": "int",
+	  "name": "fx2 param c",
+	  "units": "",
+	  "controller": 15,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 120
+	  },
+	  "range": [
+		-32768,
+		32767
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "***",
+	  "perl_name": "fx2 param c",
+	  "conv": "integer_16bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_249_fx2_param_d",
+	  "type": "int",
+	  "name": "fx2 param d",
+	  "units": "",
+	  "controller": 0,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 121
+	  },
+	  "range": [
+		-32768,
+		32767
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "***",
+	  "perl_name": "fx2 param d",
+	  "conv": "integer_16bit",
+	  "signed14bit": true
+	},
+	{
+	  "id": "nrpn_250_fx_param_a_synced",
+	  "type": "list",
+	  "name": "fx param a synced",
+	  "units": "",
+	  "controller": 1,
+	  "nrpn": {
+		"msb": 1,
+		"lsb": 122
+	  },
+	  "range": [
+		0,
+		24
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "perl_name": "fx2 param a synced",
+	  "options": [
+		"x 16",
+		"x 12",
+		"x 10 2/3",
+		"x 8",
+		"x 6",
+		"x 5 1/3",
+		"x 4",
+		"x 3",
+		"x 2 2/3",
+		"x 2",
+		"x 1 1/2",
+		"x 1 1/3",
+		"x 1",
+		"x 3/4",
+		"x 2/3",
+		"x 1/2",
+		"x 3/8",
+		"x 1/3",
+		"x 1/4",
+		"x 3/16",
+		"x 1/6",
+		"x 1/8",
+		"x 3/32",
+		"x 1/12",
+        "x 1/16"
+	  ]
+	},
+	{
+	  "id": "nrpn_512_arpeggiator_pattern",
+	  "type": "int",
+	  "name": "arpeggiator pattern",
+	  "display_name": "arp pattern",
+	  "units": "",
+	  "controller": 2,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 0
+	  },
+	  "range": [
+		0,
+		31
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "**",
+	  "perl_name": "arp pattern",
+	  "conv": "integer"
+	},
+	{
+	  "id": "nrpn_513_arpeggiator_pattern_multiplier",
+	  "type": "int",
+	  "name": "arpeggiator pattern multiplier",
+	  "display_name": "arp pattern mult",
+	  "units": "",
+	  "controller": 3,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 1
+	  },
+	  "range": [
+		0,
+		6
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "**"
+	},
+	{
+	  "id": "nrpn_514_arpeggiator_length",
+	  "type": "list",
+	  "name": "arpeggiator length",
+	  "display_name": "arp length",
+	  "units": "",
+	  "controller": 4,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 2
+	  },
+	  "range": [
+		0,
+		14
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "**",
+	  "perl_name": "arp length",
+	  "options": [
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"10",
+		"11",
+		"12",
+		"13",
+		"14",
+		"15",
+        "16"
+	  ]
+	},
+	{
+	  "id": "nrpn_515_arpeggiator_octave_range",
+	  "type": "int",
+	  "name": "arpeggiator octave range",
+	  "display_name": "arp oct range",
+	  "units": "",
+	  "controller": 5,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 3
+	  },
+	  "range": [
+		0,
+		4
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "**",
+	  "perl_name": "arp octave range",
+	  "conv": "integer"
+	},
+	{
+	  "id": "nrpn_516_arpeggiator_octave_span",
+	  "type": "list",
+	  "name": "arpeggiator octave span",
+	  "display_name": "arp oct span",
+	  "units": "",
+	  "controller": 6,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 4
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "**",
+	  "perl_name": "arp octave span",
+	  "options": [
+		"up",
+		"down",
+        "centered"
+	  ]
+	},
+	{
+	  "id": "nrpn_517_arpeggiator_note_order",
+	  "type": "list",
+	  "name": "arpeggiator note order",
+	  "display_name": "arp note order",
+	  "units": "",
+	  "controller": 7,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 5
+	  },
+	  "range": [
+		0,
+		5
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "**",
+	  "perl_name": "arp note order",
+	  "options": [
+		"forward",
+		"reverse",
+		"trigger",
+		"r-n-r in",
+		"r-n-r x",
+        "oct jump"
+	  ]
+	},
+	{
+	  "id": "nrpn_518_arpeggiator_enabled",
+	  "type": "int",
+	  "name": "arpeggiator enabled",
+	  "display_name": "arp enabled",
+	  "units": "",
+	  "controller": 8,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 6
+	  },
+	  "range": [
+		0,
+		2
+	  ],
+	  "scaling": "linear",
+	  "value": 0,
+	  "notes": "**"
+	},
+	{
+	  "id": "nrpn_519_arpeggiator_program_tempo",
+	  "type": "int",
+	  "name": "arpeggiator program tempo",
+	  "display_name": "arp prgm tempo",
+	  "units": "",
+	  "controller": 9,
+	  "nrpn": {
+		"msb": 4,
+		"lsb": 7
+	  },
+	  "range": [
+		500,
+		2500
+	  ],
+	  "scaling": "linear",
+	  "value": 500,
+	  "notes": "**"
+	}
+  ]
+}

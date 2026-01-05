@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm1s6jdspabsi"]
+
+[ext_resource type="Script" uid="uid://ciwttcfmx6la5" path="res://Serial/serial.gd" id="1_37sv4"]
+
+[node name="Serial" type="Node"]
+script = ExtResource("1_37sv4")

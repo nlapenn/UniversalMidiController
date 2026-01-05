@@ -1,0 +1,747 @@
+{
+	"active": 0,
+	"groups": [
+	  {
+		"name": "Voice",
+		"parameters": [
+		  "nrpn_000_polyphony",
+		  "nrpn_001_unison_voices",
+		  "nrpn_002_unison_detune",
+		  "nrpn_003_portamento_enabled",
+		  "nrpn_004_portamento_type",
+		  "nrpn_005_portamento_time",
+		  "nrpn_006_pitchwheel_type",
+		  "nrpn_007_analog_drift",
+		  "nrpn_008_oscillator_sync_type",
+		  "nrpn_009_fm_amount",
+          "nrpn_010_fm_type"
+		],
+		"controllers": {
+		  "nrpn_000_polyphony" : 0,
+		  "nrpn_001_unison_voices" : 1,
+		  "nrpn_002_unison_detune" : 2,
+		  "nrpn_003_portamento_enabled" : 3,
+		  "nrpn_004_portamento_type" : 4,
+		  "nrpn_005_portamento_time" : 5,
+		  "nrpn_006_pitchwheel_type" : 6,
+		  "nrpn_007_analog_drift" : 7,
+		  "nrpn_008_oscillator_sync_type" : 8,
+		  "nrpn_009_fm_amount" : 9,
+		  "nrpn_010_fm_type" : 10
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "Black", "Black", "Black", "Black", "Black"
+		]
+	  },
+	  {
+		"name": "Oscillator 1",
+		"parameters": [
+		  "nrpn_011_oscillator_1_waveform",
+		  "nrpn_012_oscillator_1_wave_shape",
+		  "nrpn_013_oscillator_1_octave",
+		  "nrpn_014_oscillator_1_transpose",
+		  "nrpn_015_oscillator_1_pitch",
+		  "nrpn_016_oscillator_1_pitchwheel_range",
+		  "nrpn_029_oscillator1_level",
+          "nrpn_035_oscillator1_balance"
+		],
+		"controllers": {
+		  "nrpn_011_oscillator_1_waveform" : 0,
+		  "nrpn_012_oscillator_1_wave_shape" : 1,
+		  "nrpn_013_oscillator_1_octave" : 2,
+		  "nrpn_014_oscillator_1_transpose" : 3,
+		  "nrpn_015_oscillator_1_pitch" : 4,
+		  "nrpn_016_oscillator_1_pitchwheel_range" : 5,
+		  "nrpn_029_oscillator1_level" : 6,
+		  "nrpn_035_oscillator1_balance" : 7
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black"
+		]
+	  },
+	  {
+		"name": "Oscillator 2",
+		"parameters": [
+		  "nrpn_017_oscillator_2_waveform",
+		  "nrpn_018_oscillator_2_wave_shape",
+		  "nrpn_019_oscillator_2_octave",
+		  "nrpn_020_oscillator_2_transpose",
+		  "nrpn_021_oscillator_2_pitch",
+		  "nrpn_022_oscillator_2_pitchwheel_range",
+		  "nrpn_030_oscillator2_level",
+          "nrpn_036_oscillator2_balance"
+		],
+		"controllers": {
+		  "nrpn_017_oscillator_2_waveform" : 0,
+		  "nrpn_018_oscillator_2_wave_shape" : 1,
+		  "nrpn_019_oscillator_2_octave" : 2,
+		  "nrpn_020_oscillator_2_transpose" : 3,
+		  "nrpn_021_oscillator_2_pitch" : 4,
+		  "nrpn_022_oscillator_2_pitchwheel_range" : 5,
+		  "nrpn_030_oscillator2_level" : 6,
+		  "nrpn_036_oscillator2_balance" : 7
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Oscillator 3",
+		"parameters": [
+		  "nrpn_023_oscillator_3_waveform",
+		  "nrpn_024_oscillator_3_wave_shape",
+		  "nrpn_025_oscillator_3_octave",
+		  "nrpn_026_oscillator_3_transpose",
+		  "nrpn_027_oscillator_3_pitch",
+		  "nrpn_028_oscillator_3_pitchwheel_range",
+		  "nrpn_031_oscillator3_level",
+          "nrpn_037_oscillator3_balance"
+		],
+		"controllers": {
+		  "nrpn_023_oscillator_3_waveform" : 0,
+		  "nrpn_024_oscillator_3_wave_shape" : 1,
+		  "nrpn_025_oscillator_3_octave" : 2,
+		  "nrpn_026_oscillator_3_transpose" : 3,
+		  "nrpn_027_oscillator_3_pitch" : 4,
+		  "nrpn_028_oscillator_3_pitchwheel_range" : 5,
+		  "nrpn_031_oscillator3_level" : 6,
+		  "nrpn_037_oscillator3_balance" : 7
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Pre-filter Mix",
+		"parameters": [
+		  "nrpn_029_oscillator1_level",
+		  "nrpn_030_oscillator2_level",
+		  "nrpn_031_oscillator3_level",
+		  "nrpn_032_ringmodulation_level",
+		  "nrpn_033_noise_level",
+		  "nrpn_034_extin_level",
+		  "nrpn_035_oscillator1_balance",
+		  "nrpn_036_oscillator2_balance",
+		  "nrpn_037_oscillator3_balance",
+		  "nrpn_056_pre_filter_level",
+		  "nrpn_038_ringmodulation_balance",
+		  "nrpn_039_noise_balance",
+		  "nrpn_040_extin_balance",
+		  "nrpn_041_series_level",
+          "nrpn_042_noise_type"
+		],
+		"controllers": {
+		  "nrpn_029_oscillator1_level" : 0,
+		  "nrpn_030_oscillator2_level" : 1,
+		  "nrpn_031_oscillator3_level" : 2,
+		  "nrpn_032_ringmodulation_level" : 3,
+		  "nrpn_033_noise_level" : 4,
+		  "nrpn_034_extin_level" : 5,
+		  "nrpn_035_oscillator1_balance" : 6,
+		  "nrpn_036_oscillator2_balance" : 7,
+		  "nrpn_037_oscillator3_balance" : 8,
+		  "nrpn_056_pre_filter_level" : 9,
+		  "nrpn_038_ringmodulation_balance" : 10,
+		  "nrpn_039_noise_balance" : 11,
+		  "nrpn_040_extin_balance" : 12,
+		  "nrpn_041_series_level" : 13,
+		  "nrpn_042_noise_type" : 14
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "Black"
+		]
+	  },
+	  {
+		"name": "Filters",
+		"parameters": [
+		  "nrpn_043_filter_1_type",
+		  "nrpn_044_filter_1_frequency",
+		  "nrpn_045_filter_1_resonance",
+		  "nrpn_046_filter_1_key_track",
+		  "nrpn_047_filter_1_envelope_amount",
+		  "nrpn_054_filter_1_level",
+		  "nrpn_061_filter_1_invert_phase",
+		  "nrpn_049_filter_2_type",
+		  "nrpn_048_filter_2_relative_to",
+		  "nrpn_050_filter_2_frequency_absolute",
+		  "nrpn_158_filter_2_frequency_relative",
+		  "nrpn_051_filter_2_resonance",
+		  "nrpn_052_filter_2_key_track",
+		  "nrpn_053_filter_2_envelope_amount",
+          "nrpn_055_filter_2_level"
+		],
+		"controllers": {
+		  "nrpn_043_filter_1_type" : 0,
+		  "nrpn_044_filter_1_frequency" : 1,
+		  "nrpn_045_filter_1_resonance" : 2,
+		  "nrpn_046_filter_1_key_track" : 3,
+		  "nrpn_047_filter_1_envelope_amount" : 4,
+		  "nrpn_054_filter_1_level" : 5,
+		  "nrpn_061_filter_1_invert_phase" : 6,
+		  "nrpn_049_filter_2_type" : 7,
+		  "nrpn_048_filter_2_relative_to" : 8,
+		  "nrpn_050_filter_2_frequency_absolute" : 9,
+		  "nrpn_158_filter_2_frequency_relative" : 10,
+		  "nrpn_051_filter_2_resonance" : 11,
+		  "nrpn_052_filter_2_key_track" : 12,
+		  "nrpn_053_filter_2_envelope_amount" : 13,
+		  "nrpn_055_filter_2_level" : 14
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "Black"
+		]
+	  },
+	  {
+		"name": "Post Filter Mix",
+		"parameters": [
+		  "nrpn_054_filter_1_level",
+		  "nrpn_055_filter_2_level",
+		  "nrpn_056_pre_filter_level",
+		  "nrpn_057_filter_1_pan",
+		  "nrpn_058_filter_2_pan",
+		  "nrpn_059_pre_filter_pan",
+		  "nrpn_060_pre_filter_source",
+		  "nrpn_061_filter_1_invert_phase",
+		  "nrpn_062_drive_type",
+		  "nrpn_063_drive_level",
+		  "nrpn_064_program_level",
+		  "nrpn_065_fx_mix",
+          "nrpn_230_fx_balance"
+		],
+		"controllers": {
+		  "nrpn_054_filter_1_level" : 0,
+		  "nrpn_055_filter_2_level" : 1,
+		  "nrpn_056_pre_filter_level" : 2,
+		  "nrpn_057_filter_1_pan" : 3,
+		  "nrpn_058_filter_2_pan" : 4,
+		  "nrpn_059_pre_filter_pan" : 5,
+		  "nrpn_060_pre_filter_source" : 6,
+		  "nrpn_061_filter_1_invert_phase" : 7,
+		  "nrpn_062_drive_type" : 8,
+		  "nrpn_063_drive_level" : 9,
+		  "nrpn_064_program_level" : 10,
+		  "nrpn_065_fx_mix" : 11,
+		  "nrpn_230_fx_balance" : 12
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Black", "Black", "Black"
+		]
+	  },
+	  {
+		"name": "FX 1",
+		"parameters": [
+		  "nrpn_065_fx_mix",
+		  "nrpn_230_fx_balance",
+		  "nrpn_231_fx_type",
+		  "nrpn_232_fx_param_a",
+		  "nrpn_233_fx_param_b",
+		  "nrpn_234_fx_param_c",
+		  "nrpn_235_fx_param_d",
+		  "nrpn_236_fx_param_e",
+		  "nrpn_237_fx_param_f",
+		  "nrpn_238_fx_param_g",
+          "nrpn_239_fx_param_h_lfo_synced"
+		],
+		"controllers": {
+		  "nrpn_065_fx_mix" : 0,
+		  "nrpn_230_fx_balance" : 1,
+		  "nrpn_231_fx_type" : 2,
+		  "nrpn_232_fx_param_a" : 3,
+		  "nrpn_233_fx_param_b" : 4,
+		  "nrpn_234_fx_param_c" : 5,
+		  "nrpn_235_fx_param_d" : 6,
+		  "nrpn_236_fx_param_e" : 7,
+		  "nrpn_237_fx_param_f" : 8,
+		  "nrpn_238_fx_param_g" : 9,
+		  "nrpn_239_fx_param_h_lfo_synced" : 10
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "Black", "Black", "Black", "Black", "Black"
+		]
+	  },
+	  {
+		"name": "FX 2",
+		"parameters": [
+		  "nrpn_245_fx2_type",
+		  "nrpn_246_fx2_param_a",
+		  "nrpn_247_fx2_param_b",
+		  "nrpn_248_fx2_param_c",
+		  "nrpn_249_fx2_param_d",
+          "nrpn_250_fx_param_a_synced"
+		],
+		"controllers": {
+		  "nrpn_245_fx2_type" : 0,
+		  "nrpn_246_fx2_param_a" : 1,
+		  "nrpn_247_fx2_param_b" : 2,
+		  "nrpn_248_fx2_param_c" : 3,
+		  "nrpn_249_fx2_param_d" : 4,
+		  "nrpn_250_fx_param_a_synced" : 5
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "Black", "Black",
+		"Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black"
+		]
+	  },
+	  {
+		"name": "Envelope 1",
+		"parameters": [
+		  "nrpn_066_envelope_1_attack_time",
+		  "nrpn_067_envelope_1_attack_slope",
+		  "nrpn_068_envelope_1_decay_time",
+		  "nrpn_069_envelope_1_decay_slope",
+		  "nrpn_070_envelope_1_sustain_time",
+		  "nrpn_071_envelope_1_sustain_level",
+		  "nrpn_072_envelope_1_release_time",
+		  "nrpn_073_envelope_1_release_slope",
+		  "nrpn_074_envelope_1_velocity_to_envelope",
+		  "nrpn_075_envelope_1_reset_every_note",
+		  "nrpn_076_envelope_1_free_run",
+		  "nrpn_077_envelope_1_loop",
+          "nrpn_078_envelope_1_sustain_pedal"
+		],
+		"controllers": {
+		  "nrpn_066_envelope_1_attack_time" : 0,
+		  "nrpn_067_envelope_1_attack_slope" : 1,
+		  "nrpn_068_envelope_1_decay_time" : 2,
+		  "nrpn_069_envelope_1_decay_slope" : 3,
+		  "nrpn_070_envelope_1_sustain_time" : 4,
+		  "nrpn_071_envelope_1_sustain_level" : 5,
+		  "nrpn_072_envelope_1_release_time" : 6,
+		  "nrpn_073_envelope_1_release_slope" : 7,
+		  "nrpn_074_envelope_1_velocity_to_envelope" : 8,
+		  "nrpn_075_envelope_1_reset_every_note" : 9,
+		  "nrpn_076_envelope_1_free_run" : 10,
+		  "nrpn_077_envelope_1_loop" : 11,
+		  "nrpn_078_envelope_1_sustain_pedal" : 12
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Black", "Black", "Black"
+		],
+		"view": {
+			"type": "envelope",
+			"map": {
+				"attack_time": "nrpn_066_envelope_1_attack_time",
+				"attack_slope": "nrpn_067_envelope_1_attack_slope",
+				"decay_time": "nrpn_068_envelope_1_decay_time",
+				"decay_slope": "nrpn_069_envelope_1_decay_slope",
+				"sustain_time": "nrpn_070_envelope_1_sustain_time",
+				"sustain_level": "nrpn_071_envelope_1_sustain_level",
+				"release_time": "nrpn_072_envelope_1_release_time",
+				"release_slope": "nrpn_073_envelope_1_release_slope"
+			}
+		}
+	  },
+	  {
+		"name": "Envelope 2",
+		"parameters": [
+		  "nrpn_079_envelope_2_attack_time",
+		  "nrpn_080_envelope_2_attack_slope",
+		  "nrpn_081_envelope_2_decay_time",
+		  "nrpn_082_envelope_2_decay_slope",
+		  "nrpn_083_envelope_2_sustain_time",
+		  "nrpn_084_envelope_2_sustain_level",
+		  "nrpn_085_envelope_2_release_time",
+		  "nrpn_086_envelope_2_release_slope",
+		  "nrpn_087_envelope_2_velocity_to_envelope",
+		  "nrpn_088_envelope_2_reset_every_note",
+		  "nrpn_089_envelope_2_free_run",
+		  "nrpn_090_envelope_2_loop",
+          "nrpn_091_envelope_2_sustain_pedal"
+		],
+		"controllers": {
+		  "nrpn_079_envelope_2_attack_time" : 0,
+		  "nrpn_080_envelope_2_attack_slope" : 1,
+		  "nrpn_081_envelope_2_decay_time" : 2,
+		  "nrpn_082_envelope_2_decay_slope" : 3,
+		  "nrpn_083_envelope_2_sustain_time" : 4,
+		  "nrpn_084_envelope_2_sustain_level" : 5,
+		  "nrpn_085_envelope_2_release_time" : 6,
+		  "nrpn_086_envelope_2_release_slope" : 7,
+		  "nrpn_087_envelope_2_velocity_to_envelope" : 8,
+		  "nrpn_088_envelope_2_reset_every_note" : 9,
+		  "nrpn_089_envelope_2_free_run" : 10,
+		  "nrpn_090_envelope_2_loop" : 11,
+		  "nrpn_091_envelope_2_sustain_pedal" : 12
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Black", "Black", "Black"
+		],
+		"view": {
+			"type": "envelope",
+			"map": {
+				"attack_time": "nrpn_079_envelope_2_attack_time",
+				"attack_slope": "nrpn_080_envelope_2_attack_slope",
+				"decay_time": "nrpn_081_envelope_2_decay_time",
+				"decay_slope": "nrpn_082_envelope_2_decay_slope",
+				"sustain_time": "nrpn_083_envelope_2_sustain_time",
+				"sustain_level": "nrpn_084_envelope_2_sustain_level",
+				"release_time": "nrpn_085_envelope_2_release_time",
+				"release_slope": "nrpn_086_envelope_2_release_slope"
+			}
+		}
+	  },
+	  {
+		"name": "Envelope 3",
+		"parameters": [
+		  "nrpn_092_envelope_3_attack_time",
+		  "nrpn_093_envelope_3_attack_slope",
+		  "nrpn_094_envelope_3_decay_time",
+		  "nrpn_095_envelope_3_decay_slope",
+		  "nrpn_096_envelope_3_sustain_time",
+		  "nrpn_097_envelope_3_sustain_level",
+		  "nrpn_098_envelope_3_release_time",
+		  "nrpn_099_envelope_3_release_slope",
+		  "nrpn_100_envelope_3_velocity_to_envelope",
+		  "nrpn_101_envelope_3_reset_every_note",
+		  "nrpn_102_envelope_3_free_run",
+		  "nrpn_103_envelope_3_loop",
+          "nrpn_104_envelope_3_sustain_pedal"
+		],
+		"controllers": {
+		  "nrpn_092_envelope_3_attack_time" : 0,
+		  "nrpn_093_envelope_3_attack_slope" : 1,
+		  "nrpn_094_envelope_3_decay_time" : 2,
+		  "nrpn_095_envelope_3_decay_slope" : 3,
+		  "nrpn_096_envelope_3_sustain_time" : 4,
+		  "nrpn_097_envelope_3_sustain_level" : 5,
+		  "nrpn_098_envelope_3_release_time" : 6,
+		  "nrpn_099_envelope_3_release_slope" : 7,
+		  "nrpn_100_envelope_3_velocity_to_envelope" : 8,
+		  "nrpn_101_envelope_3_reset_every_note" : 9,
+		  "nrpn_102_envelope_3_free_run" : 10,
+		  "nrpn_103_envelope_3_loop" : 11,
+		  "nrpn_104_envelope_3_sustain_pedal" : 12
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Black", "Black", "Black"
+		],
+		"view": {
+			"type": "envelope",
+			"map": {
+				"attack_time": "nrpn_092_envelope_3_attack_time",
+				"attack_slope": "nrpn_093_envelope_3_attack_slope",
+				"decay_time": "nrpn_094_envelope_3_decay_time",
+				"decay_slope": "nrpn_095_envelope_3_decay_slope",
+				"sustain_time": "nrpn_096_envelope_3_sustain_time",
+				"sustain_level": "nrpn_097_envelope_3_sustain_level",
+				"release_time": "nrpn_098_envelope_3_release_time",
+				"release_slope": "nrpn_099_envelope_3_release_slope"
+			}
+		}
+	  },
+	  {
+		"name": "LFO & S&H",
+		"parameters": [
+		  "nrpn_105_lfo_1_tempo_sync",
+		  "nrpn_106_lfo_1_rate_free",
+		  "nrpn_159_lfo_1_rate_follow_tempo",
+		  "nrpn_107_lfo_1_reset",
+		  "nrpn_108_m1_slider_influencelfo",
+		  "nrpn_109_lfo_2_tempo_sync",
+		  "nrpn_110_lfo_2_rate_free",
+		  "nrpn_160_lfo_2_rate_follow_tempo",
+		  "nrpn_111_lfo_2_reset",
+		  "nrpn_112_m1_slider_influencelfo",
+		  "nrpn_113_s_h_tempo_sync",
+		  "nrpn_114_s_h_rate_free",
+		  "nrpn_161_s_h_rate_synced",
+		  "nrpn_115_s_h_reset",
+		  "nrpn_116_s_h_input",
+          "nrpn_117_s_h_smoothing"
+		],
+		"controllers": {
+		  "nrpn_105_lfo_1_tempo_sync" : 0,
+		  "nrpn_106_lfo_1_rate_free" : 1,
+		  "nrpn_159_lfo_1_rate_follow_tempo" : 2,
+		  "nrpn_107_lfo_1_reset" : 3,
+		  "nrpn_108_m1_slider_influencelfo" : 4,
+		  "nrpn_109_lfo_2_tempo_sync" : 5,
+		  "nrpn_110_lfo_2_rate_free" : 6,
+		  "nrpn_160_lfo_2_rate_follow_tempo" : 7,
+		  "nrpn_111_lfo_2_reset" : 8,
+		  "nrpn_112_m1_slider_influencelfo" : 9,
+		  "nrpn_113_s_h_tempo_sync" : 10,
+		  "nrpn_114_s_h_rate_free" : 11,
+		  "nrpn_161_s_h_rate_synced" : 12,
+		  "nrpn_115_s_h_reset" : 13,
+		  "nrpn_116_s_h_input" : 14,
+		  "nrpn_117_s_h_smoothing" : 15
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Tracking Settings",
+		"parameters": [
+		  "nrpn_118_tracking_input",
+		  "nrpn_119_tracking_preset",
+          "nrpn_120_tracking_gridsize"
+		],
+		"controllers": {
+		  "nrpn_118_tracking_input" : 0,
+		  "nrpn_119_tracking_preset" : 1,
+		  "nrpn_120_tracking_gridsize" : 2
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan",  "Black", "Black", "Black", "Black", "Black",
+		"Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black"
+		]
+	  },
+	  {
+		"name": "Tracking Points A",
+		"parameters": [
+		  "nrpn_121_tracking_point",
+		  "nrpn_122_tracking_point",
+		  "nrpn_123_tracking_point",
+		  "nrpn_124_tracking_point",
+		  "nrpn_125_tracking_point",
+		  "nrpn_126_tracking_point",
+		  "nrpn_127_tracking_point",
+		  "nrpn_128_tracking_point",
+		  "nrpn_129_tracking_point",
+		  "nrpn_130_tracking_point",
+		  "nrpn_131_tracking_point",
+		  "nrpn_132_tracking_point",
+		  "nrpn_133_tracking_point",
+		  "nrpn_134_tracking_point",
+		  "nrpn_135_tracking_point",
+          "nrpn_136_tracking_point"
+		],
+		"controllers": {
+			"nrpn_121_tracking_point" : 0,
+			"nrpn_122_tracking_point" : 1,
+			"nrpn_123_tracking_point" : 2,
+			"nrpn_124_tracking_point" : 3,
+			"nrpn_125_tracking_point" : 4,
+			"nrpn_126_tracking_point" : 5,
+			"nrpn_127_tracking_point" : 6,
+			"nrpn_128_tracking_point" : 7,
+			"nrpn_129_tracking_point" : 8,
+			"nrpn_130_tracking_point" : 9,
+			"nrpn_131_tracking_point" : 10,
+			"nrpn_132_tracking_point" : 11,
+			"nrpn_133_tracking_point" : 12,
+			"nrpn_134_tracking_point" : 13,
+			"nrpn_135_tracking_point" : 14,
+			"nrpn_136_tracking_point" : 15
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Tracking Points B",
+		"parameters": [
+		  "nrpn_137_tracking_point",
+		  "nrpn_138_tracking_point",
+		  "nrpn_139_tracking_point",
+		  "nrpn_140_tracking_point",
+		  "nrpn_141_tracking_point",
+		  "nrpn_142_tracking_point",
+		  "nrpn_143_tracking_point",
+		  "nrpn_144_tracking_point",
+		  "nrpn_145_tracking_point",
+		  "nrpn_146_tracking_point",
+		  "nrpn_147_tracking_point",
+		  "nrpn_148_tracking_point",
+		  "nrpn_149_tracking_point",
+		  "nrpn_150_tracking_point",
+		  "nrpn_151_tracking_point",
+		  "nrpn_152_tracking_point",
+          "nrpn_153_tracking_point"
+		],
+		"controllers": {
+		  "nrpn_137_tracking_point" : 0,
+		  "nrpn_138_tracking_point" : 1,
+		  "nrpn_139_tracking_point" : 2,
+		  "nrpn_140_tracking_point" : 3,
+		  "nrpn_141_tracking_point" : 4,
+		  "nrpn_142_tracking_point" : 5,
+		  "nrpn_143_tracking_point" : 6,
+		  "nrpn_144_tracking_point" : 7,
+		  "nrpn_145_tracking_point" : 8,
+		  "nrpn_146_tracking_point" : 9,
+		  "nrpn_147_tracking_point" : 10,
+		  "nrpn_148_tracking_point" : 11,
+		  "nrpn_149_tracking_point" : 12,
+		  "nrpn_150_tracking_point" : 13,
+		  "nrpn_151_tracking_point" : 14,
+		  "nrpn_152_tracking_point" : 15
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Patch Cables 1-4",
+		"parameters": [
+		  "nrpn_180_patch_cable_1_source",
+		  "nrpn_181_patch_cable_1_destination",
+		  "nrpn_182_patch_cable_1_level",
+		  "nrpn_183_patch_cable_1_offset",
+		  "nrpn_184_patch_cable_2_source",
+		  "nrpn_185_patch_cable_2_destination",
+		  "nrpn_186_patch_cable_2_level",
+		  "nrpn_187_patch_cable_2_offset",
+		  "nrpn_188_patch_cable_3_source",
+		  "nrpn_189_patch_cable_3_destination",
+		  "nrpn_190_patch_cable_3_level",
+		  "nrpn_191_patch_cable_3_offset",
+		  "nrpn_192_patch_cable_4_source",
+		  "nrpn_193_patch_cable_4_destination",
+		  "nrpn_194_patch_cable_4_level",
+          "nrpn_195_patch_cable_4_offset"
+		],
+		"controllers": {
+		  "nrpn_180_patch_cable_1_source" : 0,
+		  "nrpn_181_patch_cable_1_destination" : 1,
+		  "nrpn_182_patch_cable_1_level" : 2,
+		  "nrpn_183_patch_cable_1_offset" : 3,
+		  "nrpn_184_patch_cable_2_source" : 4,
+		  "nrpn_185_patch_cable_2_destination" : 5,
+		  "nrpn_186_patch_cable_2_level" : 6,
+		  "nrpn_187_patch_cable_2_offset" : 7,
+		  "nrpn_188_patch_cable_3_source" : 8,
+		  "nrpn_189_patch_cable_3_destination" : 9,
+		  "nrpn_190_patch_cable_3_level" : 10,
+		  "nrpn_191_patch_cable_3_offset" : 11,
+		  "nrpn_192_patch_cable_4_source" : 12,
+		  "nrpn_193_patch_cable_4_destination" : 13,
+		  "nrpn_194_patch_cable_4_level" : 14,
+		  "nrpn_195_patch_cable_4_offset" : 15
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Patch Cables 5-8",
+		"parameters": [
+		  "nrpn_196_patch_cable_5_source",
+		  "nrpn_197_patch_cable_5_destination",
+		  "nrpn_198_patch_cable_5_level",
+		  "nrpn_199_patch_cable_5_offset",
+		  "nrpn_200_patch_cable_6_source",
+		  "nrpn_201_patch_cable_6_destination",
+		  "nrpn_202_patch_cable_6_level",
+		  "nrpn_203_patch_cable_6_offset",
+		  "nrpn_204_patch_cable_7_source",
+		  "nrpn_205_patch_cable_7_destination",
+		  "nrpn_206_patch_cable_7_level",
+		  "nrpn_207_patch_cable_7_offset",
+		  "nrpn_208_patch_cable_8_source",
+		  "nrpn_209_patch_cable_8_destination",
+		  "nrpn_210_patch_cable_8_level",
+          "nrpn_211_patch_cable_8_offset"
+		],
+		"controllers": {
+		  "nrpn_196_patch_cable_5_source" : 0,
+		  "nrpn_197_patch_cable_5_destination" : 1,
+		  "nrpn_198_patch_cable_5_level" : 2,
+		  "nrpn_199_patch_cable_5_offset" : 3,
+		  "nrpn_200_patch_cable_6_source" : 4,
+		  "nrpn_201_patch_cable_6_destination" : 5,
+		  "nrpn_202_patch_cable_6_level" : 6,
+		  "nrpn_203_patch_cable_6_offset" : 7,
+		  "nrpn_204_patch_cable_7_source" : 8,
+		  "nrpn_205_patch_cable_7_destination" : 9,
+		  "nrpn_206_patch_cable_7_level" : 10,
+		  "nrpn_207_patch_cable_7_offset" : 11,
+		  "nrpn_208_patch_cable_8_source" : 12,
+		  "nrpn_209_patch_cable_8_destination" : 13,
+		  "nrpn_210_patch_cable_8_level" : 14,
+		  "nrpn_211_patch_cable_8_offset" : 15
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Patch Cables 9-12",
+		"parameters": [
+		  "nrpn_212_patch_cable_9_source",
+		  "nrpn_213_patch_cable_9_destination",
+		  "nrpn_214_patch_cable_9_level",
+		  "nrpn_215_patch_cable_9_offset",
+		  "nrpn_216_patch_cable_10_source",
+		  "nrpn_217_patch_cable_10_destination",
+		  "nrpn_218_patch_cable_10_level",
+		  "nrpn_219_patch_cable_10_offset",
+		  "nrpn_220_patch_cable_11_source",
+		  "nrpn_221_patch_cable_11_destination",
+		  "nrpn_222_patch_cable_11_level",
+		  "nrpn_223_patch_cable_11_offset",
+		  "nrpn_224_patch_cable_12_source",
+		  "nrpn_225_patch_cable_12_destination",
+		  "nrpn_226_patch_cable_12_level",
+          "nrpn_227_patch_cable_12_offset"
+		],
+		"controllers": {
+		  "nrpn_212_patch_cable_9_source" : 0,
+		  "nrpn_213_patch_cable_9_destination" : 1,
+		  "nrpn_214_patch_cable_9_level" : 2,
+		  "nrpn_215_patch_cable_9_offset" : 3,
+		  "nrpn_216_patch_cable_10_source" : 4,
+		  "nrpn_217_patch_cable_10_destination" : 5,
+		  "nrpn_218_patch_cable_10_level" : 6,
+		  "nrpn_219_patch_cable_10_offset" : 7,
+		  "nrpn_220_patch_cable_11_source" : 8,
+		  "nrpn_221_patch_cable_11_destination" : 9,
+		  "nrpn_222_patch_cable_11_level" : 10,
+		  "nrpn_223_patch_cable_11_offset" : 11,
+		  "nrpn_224_patch_cable_12_source" : 12,
+		  "nrpn_225_patch_cable_12_destination" : 13,
+		  "nrpn_226_patch_cable_12_level" : 14,
+		  "nrpn_227_patch_cable_12_offset" : 15
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"BrightBlue", "Yellow", "Rose", "BrightGreen", "Amber", "Pink", "DarkRed", "NavyBlue"
+		]
+	  },
+	  {
+		"name": "Arpeggiator",
+		"parameters": [
+		  "nrpn_512_arpeggiator_pattern",
+		  "nrpn_513_arpeggiator_pattern_multiplier",
+		  "nrpn_514_arpeggiator_length",
+		  "nrpn_515_arpeggiator_octave_range",
+		  "nrpn_516_arpeggiator_octave_span",
+		  "nrpn_517_arpeggiator_note_order",
+		  "nrpn_518_arpeggiator_enabled",
+          "nrpn_519_arpeggiator_program_tempo"
+		],
+		"controllers": {
+		  "nrpn_512_arpeggiator_pattern" : 0,
+		  "nrpn_513_arpeggiator_pattern_multiplier" : 1,
+		  "nrpn_514_arpeggiator_length" : 2,
+		  "nrpn_515_arpeggiator_octave_range" : 3,
+		  "nrpn_516_arpeggiator_octave_span" : 4,
+		  "nrpn_517_arpeggiator_note_order" : 5,
+		  "nrpn_518_arpeggiator_enabled" : 6,
+		  "nrpn_519_arpeggiator_program_tempo" : 7
+		},
+		"controller_colors": [
+		"BrightRed", "Violet", "Cyan", "DarkYellow", "Lavender", "Orange", "DarkCyan", "DarkGreen",
+		"Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black"
+		]
+	  }
+	]
+  }

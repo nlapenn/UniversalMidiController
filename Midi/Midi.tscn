@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqswh4chuc8bu"]
+
+[ext_resource type="Script" uid="uid://c3ssv1fuegsr8" path="res://Midi/midi.gd" id="1_7x4sy"]
+
+[node name="Midi" type="Node"]
+script = ExtResource("1_7x4sy")

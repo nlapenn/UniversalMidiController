@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf5mrefdbve8k"]
+
+[ext_resource type="Script" uid="uid://dyfyyb2ju1fym" path="res://App.cs" id="1_d7sxu"]
+[ext_resource type="PackedScene" uid="uid://cqswh4chuc8bu" path="res://Midi/Midi.tscn" id="1_j6dmo"]
+[ext_resource type="PackedScene" uid="uid://bm1s6jdspabsi" path="res://Serial/Serial.tscn" id="2_qbwvd"]
+[ext_resource type="PackedScene" uid="uid://bkdciendm0yi5" path="res://Parameter/ParameterView.tscn" id="4_d7sxu"]
+[ext_resource type="Script" uid="uid://dhe1v2cy2i31n" path="res://button.gd" id="4_nee2x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7sxu"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="App" type="Node2D"]
+script = ExtResource("1_d7sxu")
+
+[node name="Midi" parent="." instance=ExtResource("1_j6dmo")]
+unique_name_in_owner = true
+
+[node name="Serial" parent="." instance=ExtResource("2_qbwvd")]
+unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1024.0
+offset_bottom = 600.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Control"]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 600.0
+theme_override_constants/separation = 0
+theme_override_constants/minimum_grab_thickness = 0
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="Control/HSplitContainer"]
+layout_mode = 2
+split_offset = 580
+
+[node name="ItemList" type="ItemList" parent="Control/HSplitContainer/VSplitContainer2"]
+clip_contents = false
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+
+[node name="Button" type="Button" parent="Control/HSplitContainer/VSplitContainer2"]
+layout_mode = 2
+text = "EXIT"
+script = ExtResource("4_nee2x")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Control/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_constants/minimum_grab_thickness = 0
+split_offset = 480
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Container" type="Container" parent="Control/HSplitContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Control/HSplitContainer/VSplitContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_d7sxu")
+
+[node name="ParameterGrid8x2" type="GridContainer" parent="Control/HSplitContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 109
+theme_override_constants/v_separation = 60
+columns = 8
+
+[node name="ParameterView1" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView2" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView3" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView4" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView5" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView6" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView7" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView8" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView9" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView10" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView11" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView12" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView13" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView14" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView15" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[node name="ParameterView16" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+layout_mode = 2
+
+[connection signal="pressed" from="Control/HSplitContainer/VSplitContainer2/Button" to="Control/HSplitContainer/VSplitContainer2/Button" method="_on_pressed"]
