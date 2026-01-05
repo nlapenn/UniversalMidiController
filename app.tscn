@@ -28,31 +28,36 @@ anchors_preset = 0
 offset_right = 1024.0
 offset_bottom = 600.0
 
-[node name="HSplitContainer" type="HSplitContainer" parent="Control"]
+[node name="VSplitContainer" type="VSplitContainer" parent="Control"]
 layout_mode = 0
 offset_right = 1024.0
 offset_bottom = 600.0
+split_offset = 480
+dragger_visibility = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Control/VSplitContainer"]
+layout_mode = 2
 theme_override_constants/separation = 0
 theme_override_constants/minimum_grab_thickness = 0
 dragging_enabled = false
 dragger_visibility = 2
 
-[node name="VSplitContainer2" type="VSplitContainer" parent="Control/HSplitContainer"]
+[node name="VSplitContainer2" type="VSplitContainer" parent="Control/VSplitContainer/HSplitContainer"]
 layout_mode = 2
 split_offset = 580
 
-[node name="ItemList" type="ItemList" parent="Control/HSplitContainer/VSplitContainer2"]
+[node name="ItemList" type="ItemList" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer2"]
 clip_contents = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 
-[node name="Button" type="Button" parent="Control/HSplitContainer/VSplitContainer2"]
+[node name="Button" type="Button" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer2"]
 layout_mode = 2
 text = "EXIT"
 script = ExtResource("4_nee2x")
 
-[node name="VSplitContainer" type="VSplitContainer" parent="Control/HSplitContainer"]
+[node name="VSplitContainer" type="VSplitContainer" parent="Control/VSplitContainer/HSplitContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 theme_override_constants/minimum_grab_thickness = 0
@@ -60,67 +65,67 @@ split_offset = 480
 dragging_enabled = false
 dragger_visibility = 2
 
-[node name="Container" type="Container" parent="Control/HSplitContainer/VSplitContainer"]
+[node name="Container" type="Container" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Control/HSplitContainer/VSplitContainer/Container"]
+[node name="Panel" type="Panel" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_d7sxu")
 
-[node name="ParameterGrid8x2" type="GridContainer" parent="Control/HSplitContainer/VSplitContainer"]
+[node name="ParameterGrid8x2" type="GridContainer" parent="Control/VSplitContainer"]
 layout_mode = 2
-theme_override_constants/h_separation = 109
+theme_override_constants/h_separation = 128
 theme_override_constants/v_separation = 60
 columns = 8
 
-[node name="ParameterView1" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView1" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView2" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView2" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView3" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView3" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView4" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView4" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView5" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView5" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView6" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView6" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView7" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView7" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView8" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView8" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView9" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView9" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView10" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView10" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView11" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView11" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView12" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView12" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView13" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView13" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView14" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView14" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView15" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView15" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[node name="ParameterView16" parent="Control/HSplitContainer/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
+[node name="ParameterView16" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[connection signal="pressed" from="Control/HSplitContainer/VSplitContainer2/Button" to="Control/HSplitContainer/VSplitContainer2/Button" method="_on_pressed"]
+[connection signal="pressed" from="Control/VSplitContainer/HSplitContainer/VSplitContainer2/Button" to="Control/VSplitContainer/HSplitContainer/VSplitContainer2/Button" method="_on_pressed"]

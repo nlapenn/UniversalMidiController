@@ -19,9 +19,9 @@ public partial class App : Node2D
 	public override void _Ready()
 	{
 		// --- UI nodes live under the Control child ---
-		_groupList = GetNode<ItemList>("Control/HSplitContainer/VSplitContainer2/ItemList");
+		_groupList = GetNode<ItemList>("Control/VSplitContainer/HSplitContainer/VSplitContainer2/ItemList");
 
-		var grid = GetNode<GridContainer>("Control/HSplitContainer/VSplitContainer/ParameterGrid8x2");
+		var grid = GetNode<GridContainer>("Control/VSplitContainer/ParameterGrid8x2");
 		_paramViews.Clear();
 		for (int i = 1; i <= 16; i++)
 		{

@@ -33,18 +33,15 @@ shadow_color = Color(0, 0, 0, 1)
 [node name="ParameterView" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 109.0
+offset_right = 128.0
 offset_bottom = 60.0
 
 [node name="Panel" type="Panel" parent="."]
 clip_contents = true
-custom_minimum_size = Vector2(109, 60)
+custom_minimum_size = Vector2(128, 60)
 layout_mode = 1
-anchors_preset = -1
-offset_right = 109.0
+offset_right = 128.0
 offset_bottom = 60.0
-grow_horizontal = 2
-grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_5agd1")
@@ -54,7 +51,7 @@ clip_contents = true
 layout_mode = 0
 offset_left = 3.0
 offset_top = 3.0
-offset_right = 106.0
+offset_right = 125.0
 offset_bottom = 57.0
 theme_override_constants/separation = 1
 theme_override_constants/minimum_grab_thickness = 0

@@ -6,8 +6,7 @@ compatibility_minimum = 4.1
 Example = "icons/Example.svg"
 
 [libraries]
-linux.release.x86_64 = "lib/Linux-x86_64/libgodot_rtmidi.so"
-linux.release.arm64 =  "lib/Linux-aarch64/libgodot_rtmidi.so"
-linux.arm64 =  "lib/Linux-aarch64/libgodot_rtmidi.so"
-macos.release = "lib/Darwin-universal/libgodot_rtmidi.dylib"
-windows.release.x86_64 = "lib/Windows-AMD64/godot_rtmidi.dll"
+linux.x86_64 = "lib/Linux-x86_64/libgodot_rtmidi.so"
+macos.arm64 = "lib/Darwin-universal/libgodot_rtmidi.dylib"
+macos.x86_64 = "lib/Darwin-universal/libgodot_rtmidi.dylib"
+windows.x86_64 = "lib/Windows-AMD64/godot_rtmidi.dll"
