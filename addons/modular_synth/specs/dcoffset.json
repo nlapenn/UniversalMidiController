@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "type": 7,
+  "id": "dcoffset",
+  "title": "DC Offset",
+  "category": "Utilities",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": [
+    {
+      "key": "amount",
+      "label": "Amount",
+      "kind": "float",
+      "param": "Amount",
+      "min": -2.0,
+      "max": 2.0,
+      "step": 0.001,
+      "default": 0.0,
+      "format": "%.3f"
+    }
+  ]
+}

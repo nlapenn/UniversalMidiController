@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/modular_synth/core/example_registry.gd" id="1_reg"]
+
+[resource]
+script = ExtResource("1_reg")

@@ -26,7 +26,8 @@ func _ready() -> void:
 		print("- ", port_info["port_name"], " (", port_info["port_type"], ")")
 		
 	# Configure and open port
-	serial.set_port("/dev/ttyACM0")  # Adjust for your system
+	# serial.set_port("/dev/ttyACM0")  # Adjust for your system RPI
+	serial.set_port("Com5")
 	serial.set_baud_rate(115200)
 	serial.set_timeout(1000)
 	

@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://dehvfsva7k6tm"]
+
+[ext_resource type="Script" path="res://addons/modular_synth/ui/synth_graph_editor.gd" id="1_duulf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_duulf")
+
+[node name="TopBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = 36.0
+grow_horizontal = 2
+
+[node name="AddBlockMenu" type="MenuButton" parent="TopBar"]
+text = "Add Block"
+
+[node name="ResetButton" type="Button" parent="TopBar"]
+text = "Reset Synth"
+
+[node name="PauseArpButton" type="Button" parent="TopBar"]
+text = "Pause"
+
+[node name="BypassEffectsButton" type="Button" parent="TopBar"]
+text = "Bypass FX"
+
+[node name="PrintGraphButton" type="Button" parent="TopBar"]
+text = "Debug"
+
+[node name="VoiceGraph" type="GraphEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+right_disconnects = true
+
+[connection signal="pressed" from="TopBar/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="TopBar/PauseArpButton" to="." method="_on_pause_arp_button_pressed"]
+[connection signal="pressed" from="TopBar/BypassEffectsButton" to="." method="_on_bypass_effects_button_pressed"]
+[connection signal="pressed" from="TopBar/PrintGraphButton" to="." method="_on_print_graph_button_pressed"]
+[connection signal="connection_request" from="VoiceGraph" to="." method="_on_voice_graph_connection_request"]
+[connection signal="disconnection_request" from="VoiceGraph" to="." method="_on_voice_graph_disconnection_request"]

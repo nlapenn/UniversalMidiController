@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "type": 10,
+  "id": "mult",
+  "title": "Multiply",
+  "category": "Math",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": []
+}

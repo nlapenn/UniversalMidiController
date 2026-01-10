@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/modular_synth/blocks/generic_block.gd" id="1_generic"]
+
+[node name="GenericBlock" type="GraphNode"]
+title = "Block"
+custom_minimum_size = Vector2(350, 0)
+script = ExtResource("1_generic")

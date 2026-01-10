@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "type": 11,
+  "id": "max",
+  "title": "Max",
+  "category": "Math",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": []
+}

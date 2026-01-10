@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://qmfml2n8e5qb"]
+
+[ext_resource type="PackedScene" uid="uid://dehvfsva7k6tm" path="res://addons/modular_synth/ui/synth_graph_editor.tscn" id="1_editor"]
+[ext_resource type="Script" uid="uid://c368sr7t5b2lh" path="res://addons/modular_synth/core/engine_adapter.gd" id="2_adapter"]
+[ext_resource type="PackedScene" path="res://addons/modular_synth/runtime/synth_backend.tscn" id="3_backend_scene"]
+[ext_resource type="Resource" path="res://addons/modular_synth/resources/default_registry.tres" id="4_registry"]
+
+[node name="ModularSynthSetup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -150.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backend" parent="." instance=ExtResource("3_backend_scene")]
+
+[node name="EngineAdapter" type="Node" parent="."]
+script = ExtResource("2_adapter")
+backend_path = NodePath("../Backend")
+
+[node name="GraphEditor" parent="." instance=ExtResource("1_editor")]
+layout_mode = 1
+engine_adapter_path = NodePath("../EngineAdapter")
+registry = ExtResource("4_registry")

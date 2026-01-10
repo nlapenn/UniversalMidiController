@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://addons/modular_synth/runtime/synth_backend.gd" id="1_backend"]
+[ext_resource type="PackedScene" path="res://addons/modular_synth/runtime/synth_gen.tscn" id="2_synthgen"]
+
+[node name="Backend" type="Node2D"]
+script = ExtResource("1_backend")
+
+[node name="SynthGen" parent="." instance=ExtResource("2_synthgen")]

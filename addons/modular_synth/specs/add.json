@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "type": 9,
+  "id": "add",
+  "title": "Add",
+  "category": "Math",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": []
+}

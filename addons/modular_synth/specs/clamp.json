@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "type": 8,
+  "id": "clamp",
+  "title": "Clamp",
+  "category": "Utilities",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": [
+    {
+      "key": "minvalue",
+      "label": "MinValue",
+      "kind": "float",
+      "param": "MinValue",
+      "min": -2.0,
+      "max": 2.0,
+      "step": 0.001,
+      "default": -1.0,
+      "format": "%.3f"
+    },
+    {
+      "key": "maxvalue",
+      "label": "MaxValue",
+      "kind": "float",
+      "param": "MaxValue",
+      "min": -2.0,
+      "max": 2.0,
+      "step": 0.001,
+      "default": 1.0,
+      "format": "%.3f"
+    }
+  ]
+}

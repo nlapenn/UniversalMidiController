@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "type": 0,
+  "id": "poly_blep_osc",
+  "title": "PolyBLEP Osc",
+  "category": "Sources",
+  "ports": {
+	"outputs": [
+	  {
+		"name": "Out",
+		"signal": "Samples"
+	  }
+	],
+	"inputs": [
+	  {
+		"name": "Pitch",
+		"target": "PitchCoarse"
+	  },
+	  {
+		"name": "Fine",
+		"target": "PitchFine"
+	  },
+	  {
+		"name": "PW",
+		"target": "PulseWidth"
+	  },
+	  {
+		"name": "Amp",
+		"target": "Amplitude"
+	  },
+	  {
+		"name": "Sync",
+		"target": "Sync"
+	  }
+	]
+  },
+  "params": [
+	{
+	  "key": "waveform",
+	  "label": "Waveform",
+	  "kind": "enum",
+	  "param": "Waveform",
+	  "default": 0,
+	  "values": [
+		"SIN",
+		"COS",
+		"TRI",
+		"SQUARE",
+		"RECT",
+		"SAW",
+		"RAMP",
+		"TRI_MOD",
+		"SQUARE_MOD",
+		"HALF_RECT_SIN",
+		"FULL_RECT_SIN",
+		"TRI-PULSE",
+		"TRAPEZOID",
+		"TRAP_VARIABLE",
+        "PULSE_TRAIN"
+	  ]
+	},
+	{
+	  "key": "pitchcoarse",
+	  "label": "PitchCoarse",
+	  "kind": "float",
+	  "param": "PitchCoarse",
+	  "min": -24.0,
+	  "max": 24.0,
+	  "step": 1.0,
+	  "default": 0.0,
+	  "format": "%.2f"
+	},
+	{
+	  "key": "pitchfine",
+	  "label": "PitchFine",
+	  "kind": "float",
+	  "param": "PitchFine",
+	  "min": -100.0,
+	  "max": 100.0,
+	  "step": 0.01,
+	  "default": 0.0,
+	  "format": "%.2f"
+	},
+	{
+	  "key": "pulsewidth",
+	  "label": "PulseWidth",
+	  "kind": "float",
+	  "param": "PulseWidth",
+	  "min": 0.01,
+	  "max": 0.99,
+	  "step": 0.01,
+	  "default": 0.5,
+	  "format": "%.2f"
+	},
+	{
+	  "key": "amplitude",
+	  "label": "Amplitude",
+	  "kind": "float",
+	  "param": "Amplitude",
+	  "min": 0.0,
+	  "max": 1.0,
+	  "step": 0.01,
+	  "default": 0.9,
+	  "format": "%.2f"
+	},
+	{
+	  "key": "syncamplitude",
+	  "label": "SyncAmplitude",
+	  "kind": "float",
+	  "param": "SyncAmplitude",
+	  "min": 0.0,
+	  "max": 2.0,
+	  "step": 0.01,
+	  "default": 1.0,
+	  "format": "%.2f"
+	}
+  ]
+}

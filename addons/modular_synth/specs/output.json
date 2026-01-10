@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "type": 5,
+  "id": "output",
+  "title": "Output",
+  "category": "Routing",
+  "ports": {
+    "outputs": [],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": [],
+  "is_output": true
+}

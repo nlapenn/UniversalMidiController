@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "type": 13,
+  "id": "rectify",
+  "title": "Rectify",
+  "category": "Waveshaping",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": []
+}

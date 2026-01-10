@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "type": 12,
+  "id": "min",
+  "title": "Min",
+  "category": "Math",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": []
+}

@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "type": 2,
+  "id": "simple_envelope",
+  "title": "Envelope",
+  "category": "Modulators",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "Attack",
+        "target": "Attack"
+      },
+      {
+        "name": "Release",
+        "target": "Release"
+      },
+      {
+        "name": "Amp",
+        "target": "Amplitude"
+      }
+    ]
+  },
+  "params": [
+    {
+      "key": "attack",
+      "label": "Attack",
+      "kind": "float",
+      "param": "Attack",
+      "min": 0.001,
+      "max": 5.0,
+      "step": 0.001,
+      "default": 0.009999999999999998,
+      "format": "%.3f"
+    },
+    {
+      "key": "release",
+      "label": "Release",
+      "kind": "float",
+      "param": "Release",
+      "min": 0.001,
+      "max": 5.0,
+      "step": 0.01,
+      "default": 1.001,
+      "format": "%.2f"
+    },
+    {
+      "key": "amplitude",
+      "label": "Amplitude",
+      "kind": "float",
+      "param": "Amplitude",
+      "min": 0.001,
+      "max": 5.0,
+      "step": 0.01,
+      "default": 1.001,
+      "format": "%.2f"
+    }
+  ]
+}

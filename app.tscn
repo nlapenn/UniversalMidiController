@@ -5,16 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://bm1s6jdspabsi" path="res://Serial/Serial.tscn" id="2_qbwvd"]
 [ext_resource type="PackedScene" uid="uid://bkdciendm0yi5" path="res://Parameter/ParameterView.tscn" id="4_d7sxu"]
 [ext_resource type="Script" uid="uid://dhe1v2cy2i31n" path="res://button.gd" id="4_nee2x"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7sxu"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
+[ext_resource type="PackedScene" uid="uid://qmfml2n8e5qb" path="res://addons/modular_synth/scenes/modular_synth_setup.tscn" id="5_v7vdx"]
 
 [node name="App" type="Node2D"]
 script = ExtResource("1_d7sxu")
+SynthGraphEditorPath = NodePath("Control/VSplitContainer/HSplitContainer/VSplitContainer/ModularSynthSetup/GraphEditor")
 
 [node name="Midi" parent="." instance=ExtResource("1_j6dmo")]
 unique_name_in_owner = true
@@ -52,10 +47,17 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 
-[node name="Button" type="Button" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer2"]
+[node name="GridContainer" type="GridContainer" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer2"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer2/GridContainer"]
 layout_mode = 2
 text = "EXIT"
 script = ExtResource("4_nee2x")
+
+[node name="CheckButton" type="CheckButton" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer2/GridContainer"]
+layout_mode = 2
+text = "Synth Mode"
 
 [node name="VSplitContainer" type="VSplitContainer" parent="Control/VSplitContainer/HSplitContainer"]
 layout_mode = 2
@@ -65,14 +67,10 @@ split_offset = 480
 dragging_enabled = false
 dragger_visibility = 2
 
-[node name="Container" type="Container" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer"]
-layout_mode = 2
-
-[node name="Panel" type="Panel" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer/Container"]
+[node name="ModularSynthSetup" parent="Control/VSplitContainer/HSplitContainer/VSplitContainer" instance=ExtResource("5_v7vdx")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_d7sxu")
 
 [node name="ParameterGrid8x2" type="GridContainer" parent="Control/VSplitContainer"]
 layout_mode = 2
@@ -128,4 +126,7 @@ layout_mode = 2
 [node name="ParameterView16" parent="Control/VSplitContainer/ParameterGrid8x2" instance=ExtResource("4_d7sxu")]
 layout_mode = 2
 
-[connection signal="pressed" from="Control/VSplitContainer/HSplitContainer/VSplitContainer2/Button" to="Control/VSplitContainer/HSplitContainer/VSplitContainer2/Button" method="_on_pressed"]
+[connection signal="pressed" from="Control/VSplitContainer/HSplitContainer/VSplitContainer2/GridContainer/Button" to="Control/VSplitContainer/HSplitContainer/VSplitContainer2/GridContainer/Button" method="_on_pressed"]
+[connection signal="toggled" from="Control/VSplitContainer/HSplitContainer/VSplitContainer2/GridContainer/CheckButton" to="." method="SetMode"]
+
+[editable path="Control/VSplitContainer/HSplitContainer/VSplitContainer/ModularSynthSetup"]

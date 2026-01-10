@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "type": 14,
+  "id": "half_rectify",
+  "title": "Half Rectify",
+  "category": "Waveshaping",
+  "ports": {
+    "outputs": [
+      {
+        "name": "Out",
+        "signal": "Samples"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "In",
+        "target": "Samples"
+      }
+    ]
+  },
+  "params": []
+}
